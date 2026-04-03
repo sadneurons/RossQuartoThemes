@@ -1,0 +1,80 @@
+/*
+ * rose.scss — Ross Quarto Theme
+ * Palette: rose (rosspalettes.sty)
+ * P:#2A1822  S:#D87898  A:#C25B78  B:#FBF8F9
+ * Dark maroon + rose.
+ * Best for: nursing, qualitative health research, social work.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+$body-bg:           #FBF8F9;
+$body-color:        #1C1C1C;
+$link-color:        #C25B78;
+$link-hover-color:  #D87898;
+$headings-color:    #2A1822;
+$code-bg:           #EEECEC;
+$code-color:        #C25B78;
+$pre-bg:            #EEECEC;
+$pre-color:         #1C1C1C;
+$border-color:      #DDD5D8;
+$border-radius:     0.25rem;
+$table-border-color:        #E1D9DC;
+$table-striped-bg:          rgba(42, 24, 34, 0.04);
+$table-hover-bg:            rgba(194, 91, 120, 0.06);
+
+/*-- scss:rules --*/
+
+h1 { border-bottom: 2px solid #C25B78; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #DDD5D8; padding-bottom: 0.2em; }
+h3 { color: #C25B78; }
+h4 { color: #786070; font-weight: 600; }
+.sidebar { background-color: #EEECEC; border-right: 1px solid #DDD5D8; }
+.sidebar nav[role=doc-toc] ul > li > a.active { color: #C25B78; border-left: 2px solid #C25B78; padding-left: 0.4em; font-weight: 600; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #786070; }
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #2A1822; }
+details.code-fold > summary { color: #786070; font-size: 0.82rem; font-family: $font-family-monospace; cursor: pointer; }
+details.code-fold > summary:hover { color: #C25B78; }
+.callout { border-left: 3px solid #C25B78; }
+.callout-tip    { border-left-color: #2D6A4F; }
+.callout-note   { border-left-color: #2A1822; }
+.callout-warning { border-left-color: #E08040; }
+.figure-caption, figcaption { color: #786070; font-size: 0.85rem; font-style: italic; }
+code:not(.sourceCode) { background: #EEECEC; border: 1px solid #DDD5D8; border-radius: 3px; padding: 0.1em 0.35em; font-size: 0.88em; }
+div.sourceCode { border-left: 3px solid #D87898; border-radius: 0 0.25rem 0.25rem 0; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #C25B78; font-weight: bold; }
+code span.cf { color: #2A1822; font-weight: bold; }
+code span.dt { color: #C25B78; }
+code span.st { color: #2D6A4F; }
+code span.ch { color: #2D6A4F; }
+code span.vs { color: #2D6A4F; }
+code span.ss { color: #2D6A4F; }
+code span.co { color: #8A8A94; font-style: italic; }
+code span.cv { color: #8A8A94; font-weight: bold; font-style: italic; }
+code span.do { color: #8A8A94; font-style: italic; }
+code span.fu { color: #2A1822; }
+code span.bu { color: #763A4D; }
+code span.dv { color: #B5600F; }
+code span.fl { color: #B5600F; }
+code span.bn { color: #B5600F; }
+code span.cn { color: #B5600F; }
+code span.op { color: #786070; }
+code span.im { color: #C25B78; }
+code span.pp { color: #C25B78; }
+code span.at { color: #A54E67; }
+code span.an { color: #8A8A94; font-style: italic; }
+code span.in { color: #8A8A94; font-style: italic; }
+code span.wa { color: #B5600F; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #C25B78; }
+code span.ex { color: #C25B78; }

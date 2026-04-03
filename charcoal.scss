@@ -1,0 +1,80 @@
+/*
+ * charcoal.scss — Ross Quarto Theme
+ * Palette: charcoal (rosspalettes.sty)
+ * P:#252525  S:#D95040  A:#C0392B  B:#F7F7F7
+ * Near-black + red.
+ * Best for: high-contrast technical writing, formal reports.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+$body-bg:           #F7F7F7;
+$body-color:        #1C1C1C;
+$link-color:        #C0392B;
+$link-hover-color:  #D95040;
+$headings-color:    #252525;
+$code-bg:           #EBEBEB;
+$code-color:        #C0392B;
+$pre-bg:            #EBEBEB;
+$pre-color:         #1C1C1C;
+$border-color:      #D5D5D5;
+$border-radius:     0.25rem;
+$table-border-color:        #DADADA;
+$table-striped-bg:          rgba(37, 37, 37, 0.04);
+$table-hover-bg:            rgba(192, 57, 43, 0.06);
+
+/*-- scss:rules --*/
+
+h1 { border-bottom: 2px solid #C0392B; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #D5D5D5; padding-bottom: 0.2em; }
+h3 { color: #C0392B; }
+h4 { color: #787878; font-weight: 600; }
+.sidebar { background-color: #EBEBEB; border-right: 1px solid #D5D5D5; }
+.sidebar nav[role=doc-toc] ul > li > a.active { color: #C0392B; border-left: 2px solid #C0392B; padding-left: 0.4em; font-weight: 600; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #787878; }
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #252525; }
+details.code-fold > summary { color: #787878; font-size: 0.82rem; font-family: $font-family-monospace; cursor: pointer; }
+details.code-fold > summary:hover { color: #C0392B; }
+.callout { border-left: 3px solid #C0392B; }
+.callout-tip    { border-left-color: #2D6A4F; }
+.callout-note   { border-left-color: #252525; }
+.callout-warning { border-left-color: #E08040; }
+.figure-caption, figcaption { color: #787878; font-size: 0.85rem; font-style: italic; }
+code:not(.sourceCode) { background: #EBEBEB; border: 1px solid #D5D5D5; border-radius: 3px; padding: 0.1em 0.35em; font-size: 0.88em; }
+div.sourceCode { border-left: 3px solid #D95040; border-radius: 0 0.25rem 0.25rem 0; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #C0392B; font-weight: bold; }
+code span.cf { color: #252525; font-weight: bold; }
+code span.dt { color: #C0392B; }
+code span.st { color: #2D6A4F; }
+code span.ch { color: #2D6A4F; }
+code span.vs { color: #2D6A4F; }
+code span.ss { color: #2D6A4F; }
+code span.co { color: #8A8A94; font-style: italic; }
+code span.cv { color: #8A8A94; font-weight: bold; font-style: italic; }
+code span.do { color: #8A8A94; font-style: italic; }
+code span.fu { color: #252525; }
+code span.bu { color: #6D2128; }
+code span.dv { color: #B5600F; }
+code span.fl { color: #B5600F; }
+code span.bn { color: #B5600F; }
+code span.cn { color: #B5600F; }
+code span.op { color: #787878; }
+code span.im { color: #C0392B; }
+code span.pp { color: #C0392B; }
+code span.at { color: #A33025; }
+code span.an { color: #8A8A94; font-style: italic; }
+code span.in { color: #8A8A94; font-style: italic; }
+code span.wa { color: #B5600F; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #C0392B; }
+code span.ex { color: #C0392B; }

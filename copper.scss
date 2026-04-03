@@ -1,0 +1,80 @@
+/*
+ * copper.scss — Ross Quarto Theme
+ * Palette: copper (rosspalettes.sty)
+ * P:#1A1A1A  S:#D07040  A:#B45A28  B:#FAF8F6
+ * Near-black + copper brown.
+ * Best for: archaeology, anthropology, historical research.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+$body-bg:           #FAF8F6;
+$body-color:        #1C1C1C;
+$link-color:        #B45A28;
+$link-hover-color:  #D07040;
+$headings-color:    #1A1A1A;
+$code-bg:           #EEEBE8;
+$code-color:        #B45A28;
+$pre-bg:            #EEEBE8;
+$pre-color:         #1C1C1C;
+$border-color:      #DDD9D4;
+$border-radius:     0.25rem;
+$table-border-color:        #E0DDD9;
+$table-striped-bg:          rgba(26, 26, 26, 0.04);
+$table-hover-bg:            rgba(180, 90, 40, 0.06);
+
+/*-- scss:rules --*/
+
+h1 { border-bottom: 2px solid #B45A28; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #DDD9D4; padding-bottom: 0.2em; }
+h3 { color: #B45A28; }
+h4 { color: #6E6460; font-weight: 600; }
+.sidebar { background-color: #EEEBE8; border-right: 1px solid #DDD9D4; }
+.sidebar nav[role=doc-toc] ul > li > a.active { color: #B45A28; border-left: 2px solid #B45A28; padding-left: 0.4em; font-weight: 600; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #6E6460; }
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #1A1A1A; }
+details.code-fold > summary { color: #6E6460; font-size: 0.82rem; font-family: $font-family-monospace; cursor: pointer; }
+details.code-fold > summary:hover { color: #B45A28; }
+.callout { border-left: 3px solid #B45A28; }
+.callout-tip    { border-left-color: #2D6A4F; }
+.callout-note   { border-left-color: #1A1A1A; }
+.callout-warning { border-left-color: #E08040; }
+.figure-caption, figcaption { color: #6E6460; font-size: 0.85rem; font-style: italic; }
+code:not(.sourceCode) { background: #EEEBE8; border: 1px solid #DDD9D4; border-radius: 3px; padding: 0.1em 0.35em; font-size: 0.88em; }
+div.sourceCode { border-left: 3px solid #D07040; border-radius: 0 0.25rem 0.25rem 0; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #B45A28; font-weight: bold; }
+code span.cf { color: #1A1A1A; font-weight: bold; }
+code span.dt { color: #B45A28; }
+code span.st { color: #2D6A4F; }
+code span.ch { color: #2D6A4F; }
+code span.vs { color: #2D6A4F; }
+code span.ss { color: #2D6A4F; }
+code span.co { color: #8A8A94; font-style: italic; }
+code span.cv { color: #8A8A94; font-weight: bold; font-style: italic; }
+code span.do { color: #8A8A94; font-style: italic; }
+code span.fu { color: #1A1A1A; }
+code span.bu { color: #673D22; }
+code span.dv { color: #B5600F; }
+code span.fl { color: #B5600F; }
+code span.bn { color: #B5600F; }
+code span.cn { color: #B5600F; }
+code span.op { color: #6E6460; }
+code span.im { color: #B45A28; }
+code span.pp { color: #B45A28; }
+code span.at { color: #994D22; }
+code span.an { color: #8A8A94; font-style: italic; }
+code span.in { color: #8A8A94; font-style: italic; }
+code span.wa { color: #B5600F; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #B45A28; }
+code span.ex { color: #B45A28; }
