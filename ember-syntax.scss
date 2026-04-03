@@ -1,0 +1,141 @@
+/*
+ * ember-syntax.scss — Ross Quarto Theme  [DARK]
+ * Palette: ember (syntax_theme_palettes.html — distinct from the existing ember light theme)
+ * bg:#211A0D  fg:#F5ECD8  kw:#7EC8E3  ty:#A8D8A8  st:#FFB347
+ * nu:#FF8C69  dc:#C7B3E8  fn:#E8A87C  op:#D4C4A0  cm:#6B5939
+ * Dark amber ground · cool blue tension.
+ * Best for: theses, long-form writing that wants warmth without harshness.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    700;
+$headings-line-height:    1.2;
+
+$body-bg:           #211A0D;
+$body-color:        #F5ECD8;
+$link-color:        #7EC8E3;
+$link-hover-color:  #A8D8A8;
+
+$headings-color:    #7EC8E3;
+
+$code-bg:           #190F04;
+$code-color:        #7EC8E3;
+$pre-bg:            #190F04;
+$pre-color:         #F5ECD8;
+
+$border-color:      #352A1A;
+$border-radius:     0.25rem;
+
+$table-border-color:   #352A1A;
+$table-striped-bg:     rgba(126, 200, 227, 0.05);
+$table-hover-bg:       rgba(168, 216, 168, 0.07);
+
+$enable-dark-mode: false;
+
+/*-- scss:rules --*/
+
+body { background-color: #211A0D; color: #F5ECD8; }
+
+h1 {
+  border-bottom: 2px solid #7EC8E3;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  color: #7EC8E3;
+  text-shadow: 0 0 12px rgba(126, 200, 227, 0.5);
+}
+h2 {
+  border-bottom: 1px solid #352A1A;
+  padding-bottom: 0.2em;
+  color: #7EC8E3;
+  text-shadow: 0 0 8px rgba(126, 200, 227, 0.3);
+}
+h3 { color: #A8D8A8; text-shadow: 0 0 8px rgba(168, 216, 168, 0.4); }
+h4 { color: #6B5939; font-weight: 600; }
+
+.sidebar { background-color: #190F04; border-right: 1px solid #352A1A; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #6B5939; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #7EC8E3;
+  border-left: 2px solid #7EC8E3;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #A8D8A8; }
+
+details.code-fold > summary {
+  color: #6B5939;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #7EC8E3; }
+
+code:not(.sourceCode) {
+  background: #190F04;
+  border: 1px solid #352A1A;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+  color: #7EC8E3;
+}
+
+div.sourceCode {
+  background: #190F04;
+  border-left: 3px solid #C7B3E8;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+pre.sourceCode { background: #190F04; color: #F5ECD8; }
+
+table { color: #F5ECD8; border-color: #352A1A; }
+thead { border-bottom: 2px solid #7EC8E3; color: #7EC8E3; }
+tbody tr:nth-child(even) { background: rgba(126, 200, 227, 0.04); }
+
+.callout { border-left: 3px solid #7EC8E3; background: rgba(126, 200, 227, 0.06); }
+.callout-tip     { border-left-color: #A8D8A8; background: rgba(168, 216, 168, 0.06); }
+.callout-note    { border-left-color: #C7B3E8; background: rgba(199, 179, 232, 0.06); }
+.callout-warning { border-left-color: #FF8C69; background: rgba(255, 140, 105, 0.06); }
+
+.figure-caption, figcaption { color: #6B5939; font-size: 0.85rem; font-style: italic; }
+
+::selection { background: rgba(126, 200, 227, 0.3); }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #190F04; }
+::-webkit-scrollbar-thumb { background: #352A1A; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #7EC8E3; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #7EC8E3; font-weight: bold; }    // keyword: ice blue
+code span.cf { color: #7EC8E3; font-weight: bold; }    // control flow: ice blue
+code span.dt { color: #A8D8A8; }                       // data type: sage green
+code span.st { color: #FFB347; }                       // string: amber
+code span.ch { color: #FFB347; }
+code span.vs { color: #FFB347; }
+code span.ss { color: #FFB347; }
+code span.co { color: #6B5939; font-style: italic; }   // comment: amber muted
+code span.cv { color: #6B5939; font-weight: bold; font-style: italic; }
+code span.do { color: #6B5939; font-style: italic; }
+code span.fu { color: #E8A87C; }                       // function: warm orange
+code span.bu { color: #A8D8A8; }                       // builtin: sage green
+code span.dv { color: #FF8C69; }                       // number: salmon orange
+code span.fl { color: #FF8C69; }
+code span.bn { color: #FF8C69; }
+code span.cn { color: #FF8C69; }
+code span.op { color: #D4C4A0; }                       // operator: warm parchment
+code span.im { color: #C7B3E8; }                       // import: lavender
+code span.pp { color: #C7B3E8; }                       // preprocessor: lavender
+code span.at { color: #C7B3E8; }                       // attribute: lavender
+code span.va { color: #F5ECD8; }
+code span.an { color: #6B5939; font-style: italic; }
+code span.in { color: #6B5939; font-style: italic; }
+code span.wa { color: #FF8C69; font-weight: bold; }
+code span.er { color: #FF5555; font-weight: bold; }
+code span.al { color: #FF5555; font-weight: bold; }
+code span.sc { color: #A8D8A8; }
+code span.ot { color: #F5ECD8; }
+code span.ex { color: #E8A87C; }

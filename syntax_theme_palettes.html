@@ -1,0 +1,62 @@
+
+<style>
+#tr{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:6px 0 4px}
+@media(max-width:500px){#tr{grid-template-columns:1fr}}
+</style>
+<div id="tr"></div>
+<script>
+const T=[
+  {name:'Absinthe',sub:'Forest green ground · warm pink tension',
+   c:{bg:'#1B221E',fg:'#DFF0E8',cm:'#4A6857',kw:'#FF79C6',ty:'#7DFFD1',st:'#FFD580',nu:'#FF9D57',dc:'#BD93F9',fn:'#A8E6CF',op:'#C8DDD5'}},
+  {name:'Garnet',sub:'Burgundy wine · sky blue tension',
+   c:{bg:'#221519',fg:'#F5EAED',cm:'#6B4A52',kw:'#79CFFF',ty:'#C5A3FF',st:'#FFCCD5',nu:'#FFD166',dc:'#F4A5B5',fn:'#B8DFFF',op:'#DDCACE'}},
+  {name:'Ember',sub:'Dark amber ground · cool blue tension',
+   c:{bg:'#211A0D',fg:'#F5ECD8',cm:'#6B5939',kw:'#7EC8E3',ty:'#A8D8A8',st:'#FFB347',nu:'#FF8C69',dc:'#C7B3E8',fn:'#E8A87C',op:'#D4C4A0'}},
+  {name:'Pelagic',sub:'Deep navy ground · warm amber tension',
+   c:{bg:'#0F1729',fg:'#E4EEF8',cm:'#3A4E6E',kw:'#79C0FF',ty:'#FFAD60',st:'#7EE7A0',nu:'#FF8FA3',dc:'#D2A8FF',fn:'#6FD8C4',op:'#B0C8E8'}},
+];
+
+const LINES=[
+  [{t:'cm',v:'# normalise RBANS scores by age'}],
+  null,
+  [{t:'kw',v:'from'},{t:'fg',v:' dataclasses '},{t:'kw',v:'import'},{t:'fn',v:' dataclass'}],
+  null,
+  [{t:'dc',v:'@dataclass'}],
+  [{t:'kw',v:'class'},{t:'ty',v:' Centile'},{t:'op',v:':'}],
+  [{t:'fg',v:'    label'},{t:'op',v:': '},{t:'ty',v:'str'},{t:'op',v:' = '},{t:'st',v:'"PC50"'}],
+  null,
+  [{t:'fg',v:'    '},{t:'kw',v:'def'},{t:'fn',v:' lookup'},{t:'fg',v:'(self, age: '},{t:'ty',v:'float'},{t:'fg',v:') -> '},{t:'ty',v:'float'},{t:'op',v:':'}],
+  [{t:'st',v:'        """Return centile rank."""'}],
+  [{t:'fg',v:'        mu = '},{t:'nu',v:'100.0'},{t:'fg',v:' - age * '},{t:'nu',v:'0.42'}],
+  [{t:'kw',v:'        return'},{t:'fg',v:' (mu - '},{t:'nu',v:'15.0'},{t:'fg',v:') / '},{t:'ty',v:'float'},{t:'fg',v:'(age)'}],
+];
+
+const SW=[['fg','fg'],['cm','//'],['kw','kw'],['ty','ty'],['st','str'],['nu','num'],['dc','@'],['fn','fn']];
+
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+function card(th){
+  const c=th.c;
+  const code=LINES.map(l=>l?
+    '<div>'+l.map(({t,v})=>`<span style="color:${c[t]||c.fg}">${esc(v)}</span>`).join('')+'</div>':
+    '<div style="height:.65em"></div>'
+  ).join('');
+  const sw=SW.map(([k,lb])=>
+    `<div style="display:flex;flex-direction:column;align-items:center;gap:3px">
+      <span style="display:block;width:15px;height:15px;border-radius:50%;background:${c[k]};border:0.5px solid rgba(255,255,255,0.14)"></span>
+      <span style="font-size:8px;color:${c.cm};font-family:var(--font-mono);line-height:1;user-select:none">${lb}</span>
+    </div>`
+  ).join('');
+  return `
+<div style="background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden">
+  <div style="padding:10px 13px 8px;border-bottom:0.5px solid var(--color-border-tertiary)">
+    <p style="margin:0 0 2px;font-size:13px;font-weight:500;color:var(--color-text-primary)">${th.name}</p>
+    <p style="margin:0;font-size:10.5px;color:var(--color-text-secondary)">${th.sub}</p>
+  </div>
+  <div style="padding:12px 13px;font-family:var(--font-mono);font-size:10.5px;line-height:1.72;background:${c.bg};color:${c.fg}">${code}</div>
+  <div style="background:${c.bg};padding:7px 13px 10px;display:flex;gap:10px;align-items:flex-start;border-top:0.5px solid rgba(255,255,255,0.07)">${sw}</div>
+</div>`;
+}
+
+document.getElementById('tr').innerHTML=T.map(card).join('');
+</script>

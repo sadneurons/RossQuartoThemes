@@ -1,0 +1,141 @@
+/*
+ * absinthe.scss — Ross Quarto Theme  [DARK]
+ * Palette: absinthe (syntax_theme_palettes.html)
+ * bg:#1B221E  fg:#DFF0E8  kw:#FF79C6  ty:#7DFFD1  st:#FFD580
+ * nu:#FF9D57  dc:#BD93F9  fn:#A8E6CF  op:#C8DDD5  cm:#4A6857
+ * Forest green ground · warm pink tension.
+ * Best for: neuroscience notebooks, bioinformatics, anything green-themed.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    700;
+$headings-line-height:    1.2;
+
+$body-bg:           #1B221E;
+$body-color:        #DFF0E8;
+$link-color:        #7DFFD1;
+$link-hover-color:  #FF79C6;
+
+$headings-color:    #FF79C6;
+
+$code-bg:           #141A17;
+$code-color:        #7DFFD1;
+$pre-bg:            #141A17;
+$pre-color:         #DFF0E8;
+
+$border-color:      #2D3D34;
+$border-radius:     0.25rem;
+
+$table-border-color:   #2D3D34;
+$table-striped-bg:     rgba(255, 121, 198, 0.05);
+$table-hover-bg:       rgba(125, 255, 209, 0.07);
+
+$enable-dark-mode: false;
+
+/*-- scss:rules --*/
+
+body { background-color: #1B221E; color: #DFF0E8; }
+
+h1 {
+  border-bottom: 2px solid #FF79C6;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  color: #FF79C6;
+  text-shadow: 0 0 12px rgba(255, 121, 198, 0.55);
+}
+h2 {
+  border-bottom: 1px solid #2D3D34;
+  padding-bottom: 0.2em;
+  color: #FF79C6;
+  text-shadow: 0 0 8px rgba(255, 121, 198, 0.35);
+}
+h3 { color: #7DFFD1; text-shadow: 0 0 8px rgba(125, 255, 209, 0.45); }
+h4 { color: #4A6857; font-weight: 600; }
+
+.sidebar { background-color: #141A17; border-right: 1px solid #2D3D34; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #4A6857; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #FF79C6;
+  border-left: 2px solid #FF79C6;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #7DFFD1; }
+
+details.code-fold > summary {
+  color: #4A6857;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #7DFFD1; }
+
+code:not(.sourceCode) {
+  background: #141A17;
+  border: 1px solid #2D3D34;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+  color: #7DFFD1;
+}
+
+div.sourceCode {
+  background: #141A17;
+  border-left: 3px solid #BD93F9;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+pre.sourceCode { background: #141A17; color: #DFF0E8; }
+
+table { color: #DFF0E8; border-color: #2D3D34; }
+thead { border-bottom: 2px solid #FF79C6; color: #FF79C6; }
+tbody tr:nth-child(even) { background: rgba(255, 121, 198, 0.04); }
+
+.callout { border-left: 3px solid #7DFFD1; background: rgba(125, 255, 209, 0.06); }
+.callout-tip     { border-left-color: #A8E6CF; background: rgba(168, 230, 207, 0.06); }
+.callout-note    { border-left-color: #FF79C6; background: rgba(255, 121, 198, 0.06); }
+.callout-warning { border-left-color: #FF9D57; background: rgba(255, 157, 87, 0.06); }
+
+.figure-caption, figcaption { color: #4A6857; font-size: 0.85rem; font-style: italic; }
+
+::selection { background: rgba(125, 255, 209, 0.3); }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #141A17; }
+::-webkit-scrollbar-thumb { background: #2D3D34; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #FF79C6; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #FF79C6; font-weight: bold; }    // keyword: warm pink
+code span.cf { color: #FF79C6; font-weight: bold; }    // control flow: warm pink
+code span.dt { color: #7DFFD1; }                       // data type: mint
+code span.st { color: #FFD580; }                       // string: amber gold
+code span.ch { color: #FFD580; }
+code span.vs { color: #FFD580; }
+code span.ss { color: #FFD580; }
+code span.co { color: #4A6857; font-style: italic; }   // comment: forest muted
+code span.cv { color: #4A6857; font-weight: bold; font-style: italic; }
+code span.do { color: #4A6857; font-style: italic; }
+code span.fu { color: #A8E6CF; }                       // function: soft mint
+code span.bu { color: #7DFFD1; }                       // builtin: mint
+code span.dv { color: #FF9D57; }                       // number: orange
+code span.fl { color: #FF9D57; }
+code span.bn { color: #FF9D57; }
+code span.cn { color: #FF9D57; }
+code span.op { color: #C8DDD5; }                       // operator: pale grey-green
+code span.im { color: #BD93F9; }                       // import: purple
+code span.pp { color: #BD93F9; }                       // preprocessor: purple
+code span.at { color: #BD93F9; }                       // attribute: purple
+code span.va { color: #DFF0E8; }
+code span.an { color: #4A6857; font-style: italic; }
+code span.in { color: #4A6857; font-style: italic; }
+code span.wa { color: #FF9D57; font-weight: bold; }
+code span.er { color: #FF5555; font-weight: bold; }
+code span.al { color: #FF5555; font-weight: bold; }
+code span.sc { color: #7DFFD1; }
+code span.ot { color: #DFF0E8; }
+code span.ex { color: #A8E6CF; }

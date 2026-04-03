@@ -1,0 +1,141 @@
+/*
+ * pelagic.scss — Ross Quarto Theme  [DARK]
+ * Palette: pelagic (syntax_theme_palettes.html)
+ * bg:#0F1729  fg:#E4EEF8  kw:#79C0FF  ty:#FFAD60  st:#7EE7A0
+ * nu:#FF8FA3  dc:#D2A8FF  fn:#6FD8C4  op:#B0C8E8  cm:#3A4E6E
+ * Deep navy ground · warm amber tension.
+ * Best for: oceanography, marine biology, deep-sea data, anything vast and blue.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    700;
+$headings-line-height:    1.2;
+
+$body-bg:           #0F1729;
+$body-color:        #E4EEF8;
+$link-color:        #6FD8C4;
+$link-hover-color:  #79C0FF;
+
+$headings-color:    #79C0FF;
+
+$code-bg:           #0A1020;
+$code-color:        #6FD8C4;
+$pre-bg:            #0A1020;
+$pre-color:         #E4EEF8;
+
+$border-color:      #1A2840;
+$border-radius:     0.25rem;
+
+$table-border-color:   #1A2840;
+$table-striped-bg:     rgba(121, 192, 255, 0.05);
+$table-hover-bg:       rgba(111, 216, 196, 0.07);
+
+$enable-dark-mode: false;
+
+/*-- scss:rules --*/
+
+body { background-color: #0F1729; color: #E4EEF8; }
+
+h1 {
+  border-bottom: 2px solid #79C0FF;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  color: #79C0FF;
+  text-shadow: 0 0 14px rgba(121, 192, 255, 0.55);
+}
+h2 {
+  border-bottom: 1px solid #1A2840;
+  padding-bottom: 0.2em;
+  color: #79C0FF;
+  text-shadow: 0 0 8px rgba(121, 192, 255, 0.35);
+}
+h3 { color: #FFAD60; text-shadow: 0 0 8px rgba(255, 173, 96, 0.45); }
+h4 { color: #3A4E6E; font-weight: 600; }
+
+.sidebar { background-color: #0A1020; border-right: 1px solid #1A2840; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #3A4E6E; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #6FD8C4;
+  border-left: 2px solid #6FD8C4;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #79C0FF; }
+
+details.code-fold > summary {
+  color: #3A4E6E;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #6FD8C4; }
+
+code:not(.sourceCode) {
+  background: #0A1020;
+  border: 1px solid #1A2840;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+  color: #6FD8C4;
+}
+
+div.sourceCode {
+  background: #0A1020;
+  border-left: 3px solid #FFAD60;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+pre.sourceCode { background: #0A1020; color: #E4EEF8; }
+
+table { color: #E4EEF8; border-color: #1A2840; }
+thead { border-bottom: 2px solid #79C0FF; color: #79C0FF; }
+tbody tr:nth-child(even) { background: rgba(121, 192, 255, 0.04); }
+
+.callout { border-left: 3px solid #6FD8C4; background: rgba(111, 216, 196, 0.06); }
+.callout-tip     { border-left-color: #7EE7A0; background: rgba(126, 231, 160, 0.06); }
+.callout-note    { border-left-color: #79C0FF; background: rgba(121, 192, 255, 0.06); }
+.callout-warning { border-left-color: #FFAD60; background: rgba(255, 173, 96, 0.06); }
+
+.figure-caption, figcaption { color: #3A4E6E; font-size: 0.85rem; font-style: italic; }
+
+::selection { background: rgba(111, 216, 196, 0.3); }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0A1020; }
+::-webkit-scrollbar-thumb { background: #1A2840; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #79C0FF; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #79C0FF; font-weight: bold; }    // keyword: pale blue
+code span.cf { color: #79C0FF; font-weight: bold; }    // control flow: pale blue
+code span.dt { color: #FFAD60; }                       // data type: amber orange
+code span.st { color: #7EE7A0; }                       // string: mint green
+code span.ch { color: #7EE7A0; }
+code span.vs { color: #7EE7A0; }
+code span.ss { color: #7EE7A0; }
+code span.co { color: #3A4E6E; font-style: italic; }   // comment: deep navy muted
+code span.cv { color: #3A4E6E; font-weight: bold; font-style: italic; }
+code span.do { color: #3A4E6E; font-style: italic; }
+code span.fu { color: #6FD8C4; }                       // function: teal cyan
+code span.bu { color: #79C0FF; }                       // builtin: pale blue
+code span.dv { color: #FF8FA3; }                       // number: soft pink
+code span.fl { color: #FF8FA3; }
+code span.bn { color: #FF8FA3; }
+code span.cn { color: #FF8FA3; }
+code span.op { color: #B0C8E8; }                       // operator: pale blue-grey
+code span.im { color: #D2A8FF; }                       // import: lavender
+code span.pp { color: #D2A8FF; }                       // preprocessor: lavender
+code span.at { color: #D2A8FF; }                       // attribute: lavender
+code span.va { color: #E4EEF8; }
+code span.an { color: #3A4E6E; font-style: italic; }
+code span.in { color: #3A4E6E; font-style: italic; }
+code span.wa { color: #FFAD60; font-weight: bold; }
+code span.er { color: #FF5555; font-weight: bold; }
+code span.al { color: #FF5555; font-weight: bold; }
+code span.sc { color: #6FD8C4; }
+code span.ot { color: #E4EEF8; }
+code span.ex { color: #6FD8C4; }

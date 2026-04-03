@@ -1,0 +1,160 @@
+/*
+ * acid.scss — Ross Quarto Theme  [DARK]
+ * Palette: acid (custom psychedelic)
+ * P:#FF00FF  S:#00FFFF  A:#ADFF2F  T:#F0EEF0  B:#0A000A
+ * Near-black + electric magenta, cyan, chartreuse. Neon rave aesthetic.
+ * Best for: visualisations you want people to notice, teaching demos, chaos.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    700;
+$headings-line-height:    1.2;
+
+// Dark theme — void-black canvas, neon everything
+$body-bg:           #0A000A;
+$body-color:        #F0EEF0;
+$link-color:        #ADFF2F;
+$link-hover-color:  #00FFFF;
+
+$headings-color:    #FF00FF;
+
+$code-bg:           #14001A;
+$code-color:        #ADFF2F;
+$pre-bg:            #14001A;
+$pre-color:         #F0EEF0;
+
+$border-color:      #2A002A;
+$border-radius:     0.25rem;
+
+$table-border-color:   #2A002A;
+$table-striped-bg:     rgba(255, 0, 255, 0.05);
+$table-hover-bg:       rgba(173, 255, 47, 0.08);
+
+$enable-dark-mode: false;
+
+/*-- scss:rules --*/
+
+// ── Base ──────────────────────────────────────────────────────────
+body { background-color: #0A000A; color: #F0EEF0; }
+
+// ── Headings ──────────────────────────────────────────────────────
+h1 {
+  border-bottom: 2px solid #FF00FF;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  color: #FF00FF;
+  text-shadow: 0 0 12px rgba(255, 0, 255, 0.6);
+}
+h2 {
+  border-bottom: 1px solid #2A002A;
+  padding-bottom: 0.2em;
+  color: #FF00FF;
+  text-shadow: 0 0 8px rgba(255, 0, 255, 0.4);
+}
+h3 { color: #00FFFF; text-shadow: 0 0 8px rgba(0, 255, 255, 0.5); }
+h4 { color: #8A6A8A; font-weight: 600; }
+
+// ── TOC / sidebar ─────────────────────────────────────────────────
+.sidebar {
+  background-color: #14001A;
+  border-right: 1px solid #2A002A;
+}
+.sidebar nav[role=doc-toc] ul > li > a {
+  color: #8A6A8A;
+}
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #ADFF2F;
+  border-left: 2px solid #ADFF2F;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #FF00FF; }
+
+// ── Code fold ─────────────────────────────────────────────────────
+details.code-fold > summary {
+  color: #8A6A8A;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #ADFF2F; }
+
+// ── Code blocks ───────────────────────────────────────────────────
+code:not(.sourceCode) {
+  background: #14001A;
+  border: 1px solid #2A002A;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+  color: #ADFF2F;
+}
+
+div.sourceCode {
+  background: #14001A;
+  border-left: 3px solid #FF00FF;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+pre.sourceCode { background: #14001A; color: #F0EEF0; }
+
+// ── Tables ────────────────────────────────────────────────────────
+table { color: #F0EEF0; border-color: #2A002A; }
+thead { border-bottom: 2px solid #FF00FF; color: #FF00FF; }
+tbody tr:nth-child(even) { background: rgba(255, 0, 255, 0.04); }
+
+// ── Callouts ──────────────────────────────────────────────────────
+.callout {
+  border-left: 3px solid #ADFF2F;
+  background: rgba(173, 255, 47, 0.06);
+}
+.callout-tip     { border-left-color: #00FFFF; background: rgba(0, 255, 255, 0.06); }
+.callout-note    { border-left-color: #FF00FF; background: rgba(255, 0, 255, 0.06); }
+.callout-warning { border-left-color: #FF6B35; background: rgba(255, 107, 53, 0.06); }
+
+// ── Captions ──────────────────────────────────────────────────────
+.figure-caption, figcaption { color: #8A6A8A; font-size: 0.85rem; font-style: italic; }
+
+// ── Selection ─────────────────────────────────────────────────────
+::selection { background: rgba(255, 0, 255, 0.35); }
+
+// ── Scrollbar ─────────────────────────────────────────────────────
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #14001A; }
+::-webkit-scrollbar-thumb { background: #2A002A; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #FF00FF; }
+
+// ── Syntax highlighting token colours (Pandoc span classes) ────────
+code span.kw { color: #FF00FF; font-weight: bold; }         // keyword: magenta
+code span.cf { color: #00FFFF; font-weight: bold; }         // control flow: cyan
+code span.dt { color: #ADFF2F; }                            // data type: lime
+code span.st { color: #FFD700; }                            // string: electric gold
+code span.ch { color: #FFD700; }
+code span.vs { color: #FFD700; }
+code span.ss { color: #FFD700; }
+code span.co { color: #8A6A8A; font-style: italic; }        // comment: muted
+code span.cv { color: #8A6A8A; font-weight: bold; font-style: italic; }
+code span.do { color: #8A6A8A; font-style: italic; }
+code span.fu { color: #FF69B4; }                            // function: hot pink
+code span.bu { color: #40E0D0; }                            // builtin: turquoise
+code span.dv { color: #FF6B35; }                            // number: hot orange
+code span.fl { color: #FF6B35; }
+code span.bn { color: #FF6B35; }
+code span.cn { color: #FF6B35; }
+code span.op { color: #8A6A8A; }                            // operator: muted
+code span.im { color: #ADFF2F; }                            // import: lime
+code span.pp { color: #ADFF2F; }                            // preprocessor: lime
+code span.at { color: #CCFF00; }                            // attribute: yellow-lime
+code span.va { color: #F0EEF0; }
+code span.an { color: #8A6A8A; font-style: italic; }
+code span.in { color: #8A6A8A; font-style: italic; }
+code span.wa { color: #FF6B35; font-weight: bold; }
+code span.er { color: #FF1744; font-weight: bold; }
+code span.al { color: #FF1744; font-weight: bold; }
+code span.sc { color: #ADFF2F; }
+code span.ot { color: #F0EEF0; }
+code span.ex { color: #ADFF2F; }

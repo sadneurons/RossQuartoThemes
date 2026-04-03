@@ -1,0 +1,160 @@
+/*
+ * vaporwave.scss — Ross Quarto Theme  [DARK]
+ * Palette: vaporwave (custom psychedelic)
+ * P:#FF71CE  S:#01CDFE  A:#B967FF  T:#F5E6FF  B:#1A0030
+ * Deep cosmic purple + hot pink, sky blue, violet. 80s vaporwave aesthetic.
+ * Best for: anything that deserves to look like a Miami dream sequence.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    700;
+$headings-line-height:    1.2;
+
+// Dark theme — deep space purple canvas
+$body-bg:           #1A0030;
+$body-color:        #F5E6FF;
+$link-color:        #05FFA1;
+$link-hover-color:  #01CDFE;
+
+$headings-color:    #FF71CE;
+
+$code-bg:           #130025;
+$code-color:        #05FFA1;
+$pre-bg:            #130025;
+$pre-color:         #F5E6FF;
+
+$border-color:      #2D0060;
+$border-radius:     0.25rem;
+
+$table-border-color:   #2D0060;
+$table-striped-bg:     rgba(255, 113, 206, 0.05);
+$table-hover-bg:       rgba(5, 255, 161, 0.07);
+
+$enable-dark-mode: false;
+
+/*-- scss:rules --*/
+
+// ── Base ──────────────────────────────────────────────────────────
+body { background-color: #1A0030; color: #F5E6FF; }
+
+// ── Headings ──────────────────────────────────────────────────────
+h1 {
+  border-bottom: 2px solid #FF71CE;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  color: #FF71CE;
+  text-shadow: 0 0 14px rgba(255, 113, 206, 0.65);
+}
+h2 {
+  border-bottom: 1px solid #2D0060;
+  padding-bottom: 0.2em;
+  color: #FF71CE;
+  text-shadow: 0 0 8px rgba(255, 113, 206, 0.4);
+}
+h3 { color: #01CDFE; text-shadow: 0 0 8px rgba(1, 205, 254, 0.5); }
+h4 { color: #9B78C4; font-weight: 600; }
+
+// ── TOC / sidebar ─────────────────────────────────────────────────
+.sidebar {
+  background-color: #130025;
+  border-right: 1px solid #2D0060;
+}
+.sidebar nav[role=doc-toc] ul > li > a {
+  color: #9B78C4;
+}
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #05FFA1;
+  border-left: 2px solid #05FFA1;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #FF71CE; }
+
+// ── Code fold ─────────────────────────────────────────────────────
+details.code-fold > summary {
+  color: #9B78C4;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #05FFA1; }
+
+// ── Code blocks ───────────────────────────────────────────────────
+code:not(.sourceCode) {
+  background: #130025;
+  border: 1px solid #2D0060;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+  color: #05FFA1;
+}
+
+div.sourceCode {
+  background: #130025;
+  border-left: 3px solid #B967FF;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+pre.sourceCode { background: #130025; color: #F5E6FF; }
+
+// ── Tables ────────────────────────────────────────────────────────
+table { color: #F5E6FF; border-color: #2D0060; }
+thead { border-bottom: 2px solid #FF71CE; color: #FF71CE; }
+tbody tr:nth-child(even) { background: rgba(255, 113, 206, 0.04); }
+
+// ── Callouts ──────────────────────────────────────────────────────
+.callout {
+  border-left: 3px solid #B967FF;
+  background: rgba(185, 103, 255, 0.07);
+}
+.callout-tip     { border-left-color: #05FFA1; background: rgba(5, 255, 161, 0.06); }
+.callout-note    { border-left-color: #FF71CE; background: rgba(255, 113, 206, 0.06); }
+.callout-warning { border-left-color: #FF9A8B; background: rgba(255, 154, 139, 0.06); }
+
+// ── Captions ──────────────────────────────────────────────────────
+.figure-caption, figcaption { color: #9B78C4; font-size: 0.85rem; font-style: italic; }
+
+// ── Selection ─────────────────────────────────────────────────────
+::selection { background: rgba(185, 103, 255, 0.4); }
+
+// ── Scrollbar ─────────────────────────────────────────────────────
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #130025; }
+::-webkit-scrollbar-thumb { background: #2D0060; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #B967FF; }
+
+// ── Syntax highlighting token colours (Pandoc span classes) ────────
+code span.kw { color: #FF71CE; font-weight: bold; }         // keyword: hot pink
+code span.cf { color: #01CDFE; font-weight: bold; }         // control flow: sky blue
+code span.dt { color: #B967FF; }                            // data type: violet
+code span.st { color: #05FFA1; }                            // string: neon mint
+code span.ch { color: #05FFA1; }
+code span.vs { color: #05FFA1; }
+code span.ss { color: #05FFA1; }
+code span.co { color: #9B78C4; font-style: italic; }        // comment: muted violet
+code span.cv { color: #9B78C4; font-weight: bold; font-style: italic; }
+code span.do { color: #9B78C4; font-style: italic; }
+code span.fu { color: #FFFB96; }                            // function: neon yellow
+code span.bu { color: #01CDFE; }                            // builtin: sky blue
+code span.dv { color: #FF9A8B; }                            // number: peachy coral
+code span.fl { color: #FF9A8B; }
+code span.bn { color: #FF9A8B; }
+code span.cn { color: #FF9A8B; }
+code span.op { color: #9B78C4; }                            // operator: muted violet
+code span.im { color: #B967FF; }                            // import: violet
+code span.pp { color: #B967FF; }                            // preprocessor: violet
+code span.at { color: #E6A0FF; }                            // attribute: light violet
+code span.va { color: #F5E6FF; }
+code span.an { color: #9B78C4; font-style: italic; }
+code span.in { color: #9B78C4; font-style: italic; }
+code span.wa { color: #FF9A8B; font-weight: bold; }
+code span.er { color: #FF1744; font-weight: bold; }
+code span.al { color: #FF1744; font-weight: bold; }
+code span.sc { color: #B967FF; }
+code span.ot { color: #F5E6FF; }
+code span.ex { color: #05FFA1; }

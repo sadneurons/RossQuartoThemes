@@ -1,0 +1,141 @@
+/*
+ * garnet.scss — Ross Quarto Theme  [DARK]
+ * Palette: garnet (syntax_theme_palettes.html)
+ * bg:#221519  fg:#F5EAED  kw:#79CFFF  ty:#C5A3FF  st:#FFCCD5
+ * nu:#FFD166  dc:#F4A5B5  fn:#B8DFFF  op:#DDCACE  cm:#6B4A52
+ * Burgundy wine ground · sky blue tension.
+ * Best for: clinical research, medical imaging, anything with gravitas.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    700;
+$headings-line-height:    1.2;
+
+$body-bg:           #221519;
+$body-color:        #F5EAED;
+$link-color:        #79CFFF;
+$link-hover-color:  #C5A3FF;
+
+$headings-color:    #79CFFF;
+
+$code-bg:           #1A1013;
+$code-color:        #79CFFF;
+$pre-bg:            #1A1013;
+$pre-color:         #F5EAED;
+
+$border-color:      #362028;
+$border-radius:     0.25rem;
+
+$table-border-color:   #362028;
+$table-striped-bg:     rgba(121, 207, 255, 0.05);
+$table-hover-bg:       rgba(197, 163, 255, 0.07);
+
+$enable-dark-mode: false;
+
+/*-- scss:rules --*/
+
+body { background-color: #221519; color: #F5EAED; }
+
+h1 {
+  border-bottom: 2px solid #79CFFF;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  color: #79CFFF;
+  text-shadow: 0 0 12px rgba(121, 207, 255, 0.5);
+}
+h2 {
+  border-bottom: 1px solid #362028;
+  padding-bottom: 0.2em;
+  color: #79CFFF;
+  text-shadow: 0 0 8px rgba(121, 207, 255, 0.3);
+}
+h3 { color: #C5A3FF; text-shadow: 0 0 8px rgba(197, 163, 255, 0.45); }
+h4 { color: #6B4A52; font-weight: 600; }
+
+.sidebar { background-color: #1A1013; border-right: 1px solid #362028; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #6B4A52; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #79CFFF;
+  border-left: 2px solid #79CFFF;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #C5A3FF; }
+
+details.code-fold > summary {
+  color: #6B4A52;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #79CFFF; }
+
+code:not(.sourceCode) {
+  background: #1A1013;
+  border: 1px solid #362028;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+  color: #79CFFF;
+}
+
+div.sourceCode {
+  background: #1A1013;
+  border-left: 3px solid #C5A3FF;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+pre.sourceCode { background: #1A1013; color: #F5EAED; }
+
+table { color: #F5EAED; border-color: #362028; }
+thead { border-bottom: 2px solid #79CFFF; color: #79CFFF; }
+tbody tr:nth-child(even) { background: rgba(121, 207, 255, 0.04); }
+
+.callout { border-left: 3px solid #79CFFF; background: rgba(121, 207, 255, 0.06); }
+.callout-tip     { border-left-color: #B8DFFF; background: rgba(184, 223, 255, 0.06); }
+.callout-note    { border-left-color: #C5A3FF; background: rgba(197, 163, 255, 0.06); }
+.callout-warning { border-left-color: #FFD166; background: rgba(255, 209, 102, 0.06); }
+
+.figure-caption, figcaption { color: #6B4A52; font-size: 0.85rem; font-style: italic; }
+
+::selection { background: rgba(121, 207, 255, 0.3); }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1A1013; }
+::-webkit-scrollbar-thumb { background: #362028; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #79CFFF; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #79CFFF; font-weight: bold; }    // keyword: sky blue
+code span.cf { color: #79CFFF; font-weight: bold; }    // control flow: sky blue
+code span.dt { color: #C5A3FF; }                       // data type: lavender
+code span.st { color: #FFCCD5; }                       // string: blush pink
+code span.ch { color: #FFCCD5; }
+code span.vs { color: #FFCCD5; }
+code span.ss { color: #FFCCD5; }
+code span.co { color: #6B4A52; font-style: italic; }   // comment: wine muted
+code span.cv { color: #6B4A52; font-weight: bold; font-style: italic; }
+code span.do { color: #6B4A52; font-style: italic; }
+code span.fu { color: #B8DFFF; }                       // function: light blue
+code span.bu { color: #79CFFF; }                       // builtin: sky blue
+code span.dv { color: #FFD166; }                       // number: golden yellow
+code span.fl { color: #FFD166; }
+code span.bn { color: #FFD166; }
+code span.cn { color: #FFD166; }
+code span.op { color: #DDCACE; }                       // operator: pale rose-grey
+code span.im { color: #F4A5B5; }                       // import: soft pink
+code span.pp { color: #F4A5B5; }                       // preprocessor: soft pink
+code span.at { color: #F4A5B5; }                       // attribute: soft pink
+code span.va { color: #F5EAED; }
+code span.an { color: #6B4A52; font-style: italic; }
+code span.in { color: #6B4A52; font-style: italic; }
+code span.wa { color: #FFD166; font-weight: bold; }
+code span.er { color: #FF5555; font-weight: bold; }
+code span.al { color: #FF5555; font-weight: bold; }
+code span.sc { color: #C5A3FF; }
+code span.ot { color: #F5EAED; }
+code span.ex { color: #B8DFFF; }

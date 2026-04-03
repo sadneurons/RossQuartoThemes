@@ -4,7 +4,7 @@
 # Reference themes by absolute or relative path to the .scss file.
 # ─────────────────────────────────────────────────────────────────
 
-# ── Neuroimaging / ASL notebooks ─────────────────────────────────
+# ── Example: neuroimaging / ASL notebooks ────────────────────────
 format:
   html:
     theme: /home/tenebris/Desktop/RossQuartoThemes/brainlab.scss
@@ -25,23 +25,69 @@ execute:
   message: false
 
 # ─────────────────────────────────────────────────────────────────
-# Theme quick-reference:
+# Theme quick-reference (38 themes, mirroring rosspalettes.sty)
 #
-#   lancet.scss    — deep navy + crimson       manuscripts, analysis reports
-#   brainlab.scss  — dark blue + cyan/orange   neuroimaging, ASL, TDA notebooks
-#   nature.scss    — deep blue + Nature blue   preprints, methods papers
-#   cortex.scss    — dark purple + teal        neuroscience, cognitive research
-#   slate.scss     — blue-grey                 stats reports, generic notebooks
-#   oxford.scss    — Oxford blue               grants, institutional documents
-#   ember.scss     — dark brown + amber        theses, long-form writing
-#   blackboard.scss — chalkboard green [DARK]  teaching, lecture notes
+# ── Academic / Journal ────────────────────────────────────────────
+#   lancet.scss    — deep navy + crimson         manuscripts, analysis reports
+#   nature.scss    — deep blue + Nature blue      preprints, methods papers
+#   nejm.scss      — deep maroon + crimson        medical manuscripts, clinical reports
+#   bmj.scss       — dark navy + medical blue     BMJ-style clinical papers
+#   cell.scss      — deep navy + gold             biology, genetics, Cell-style papers
+#   jama.scss      — dark brown + muted rose      clinical medicine, epidemiology
+#   nhs.scss       — NHS deep blue + sky blue     clinical NHS documents, health reports
 #
+# ── University / Institution ──────────────────────────────────────
+#   oxford.scss    — Oxford blue                  grants, institutional documents
+#   cambridge.scss — Cambridge slate + light blue Cambridge-style academic papers
+#   imperial.scss  — Imperial navy + orange       engineering, Imperial College reports
+#   uom.scss       — UoM purple + violet          UoM institutional reports
+#   economist.scss — near-black + Economist red   policy briefs, economics, data journalism
+#
+# ── Domain-specific ───────────────────────────────────────────────
+#   brainlab.scss  — dark blue + cyan/orange  [DARK-ISH]  neuroimaging, ASL, TDA
+#   cortex.scss    — dark purple + teal           neuroscience, cognitive research
+#   genome.scss    — deep navy + blue + green     genomics, genetics, bioinformatics
+#   clinical.scss  — clinical navy + green        clinical trials, RCT reports
+#   assay.scss     — navy + amber                 biomarker studies, clinical assays
+#   lecture.scss   — academic navy + green        lecture notes, course materials
+#   blackboard.scss — chalkboard green  [DARK]    teaching, chalk-style notes
+#
+# ── Syntax palette [DARK] ─────────────────────────────────────────
+#   absinthe.scss    — forest green + warm pink     [DARK]   neuroscience, bioinformatics
+#   garnet.scss      — burgundy wine + sky blue     [DARK]   clinical research, medical imaging
+#   ember-syntax.scss — dark amber + ice blue       [DARK]   theses, long-form writing
+#   pelagic.scss     — deep navy + warm amber       [DARK]   oceanography, marine/environmental
+#
+# ── Psychedelic [DARK] ────────────────────────────────────────────
+#   acid.scss      — void-black + neon magenta/cyan/lime  [DARK]   rave aesthetic
+#   vaporwave.scss — cosmic purple + hot pink/mint/violet [DARK]   80s Miami dreams
+#
+# ── Corporate / General ───────────────────────────────────────────
+#   slate.scss     — blue-grey                    stats reports, generic notebooks
+#   ember.scss     — dark brown + amber           theses, long-form writing
+#   midnight.scss  — deep navy on white           corporate reports, policy documents
+#   obsidian.scss  — near-black + gold            executive summaries
+#   nordic.scss    — blue-grey + teal             Scandinavian-style data reports
+#   indigo.scss    — deep indigo + material blue  software documentation, tech reports
+#   ivory.scss     — muted navy on warm ivory     formal correspondence, institutional
+#   plum.scss      — deep plum + violet           psychology, humanities
+#   steel.scss     — steel grey + orange          engineering, technical documentation
+#   bordeaux.scss  — deep wine + rose             history, humanities, literary analysis
+#   arctic.scss    — arctic deep blue             polar/environmental science
+#   saffron.scss   — dark navy + saffron yellow   data science, analytical documents
+#   dusk.scss      — dusk purple + soft rose      psychology, social sciences
+#   charcoal.scss  — near-black + red             high-contrast technical writing
+#   copper.scss    — near-black + copper          archaeology, anthropology, history
+#   rose.scss      — dark maroon + rose           nursing, qualitative health research
+#   graphite.scss  — pure greyscale               maximally neutral, print-ready
+#   teal.scss      — deep teal + mid teal         environmental science, ecology
+#   evergreen.scss — forest green + emerald       ecology, sustainability
+#
+# ─────────────────────────────────────────────────────────────────
 # Usage — always pair .scss theme with matching .theme highlight file:
+#
 #   theme:           /home/tenebris/Desktop/RossQuartoThemes/lancet.scss
 #   highlight-style: /home/tenebris/Desktop/RossQuartoThemes/lancet.theme
 #
-#   theme:           /home/tenebris/Desktop/RossQuartoThemes/blackboard.scss
-#   highlight-style: /home/tenebris/Desktop/RossQuartoThemes/blackboard.theme
-#
-# NOTE: key is highlight-style (not syntax-highlighting — Quarto ignores that)
+# NOTE: use highlight-style (not syntax-highlighting — Quarto ignores that)
 # ─────────────────────────────────────────────────────────────────
