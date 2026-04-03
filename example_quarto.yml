@@ -57,6 +57,8 @@ execute:
 #   garnet.scss      — burgundy wine + sky blue     [DARK]   clinical research, medical imaging
 #   ember-syntax.scss — dark amber + ice blue       [DARK]   theses, long-form writing
 #   pelagic.scss     — deep navy + warm amber       [DARK]   oceanography, marine/environmental
+#   abyss.scss       — near-black navy + max neon   [DARK]   deep-dive analyses, high contrast
+#   voltage.scss     — near-black warm + vivid warm [DARK]   urgent, high-energy data work
 #
 # ── Psychedelic [DARK] ────────────────────────────────────────────
 #   acid.scss      — void-black + neon magenta/cyan/lime  [DARK]   rave aesthetic

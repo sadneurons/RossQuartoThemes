@@ -1,0 +1,141 @@
+/*
+ * voltage.scss — Ross Quarto Theme  [DARK]
+ * Palette: voltage (syntax_theme_palettes.html)
+ * bg:#0C0A08  fg:#FFF8E8  kw:#FF6B00  ty:#FFD700  st:#00FF9F
+ * nu:#FF3366  dc:#00CCFF  fn:#FF9F00  op:#886644  cm:#4A3C28
+ * Near-black warm · vivid warm accents.
+ * Best for: high-energy data work, anything that should feel urgent and alive.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    700;
+$headings-line-height:    1.2;
+
+$body-bg:           #0C0A08;
+$body-color:        #FFF8E8;
+$link-color:        #FF9F00;
+$link-hover-color:  #FF6B00;
+
+$headings-color:    #FF6B00;
+
+$code-bg:           #090706;
+$code-color:        #FF9F00;
+$pre-bg:            #090706;
+$pre-color:         #FFF8E8;
+
+$border-color:      #1E180E;
+$border-radius:     0.25rem;
+
+$table-border-color:   #1E180E;
+$table-striped-bg:     rgba(255, 107, 0, 0.05);
+$table-hover-bg:       rgba(255, 159, 0, 0.07);
+
+$enable-dark-mode: false;
+
+/*-- scss:rules --*/
+
+body { background-color: #0C0A08; color: #FFF8E8; }
+
+h1 {
+  border-bottom: 2px solid #FF6B00;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  color: #FF6B00;
+  text-shadow: 0 0 14px rgba(255, 107, 0, 0.65);
+}
+h2 {
+  border-bottom: 1px solid #1E180E;
+  padding-bottom: 0.2em;
+  color: #FF6B00;
+  text-shadow: 0 0 8px rgba(255, 107, 0, 0.4);
+}
+h3 { color: #FFD700; text-shadow: 0 0 8px rgba(255, 215, 0, 0.5); }
+h4 { color: #4A3C28; font-weight: 600; }
+
+.sidebar { background-color: #090706; border-right: 1px solid #1E180E; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #4A3C28; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #FF9F00;
+  border-left: 2px solid #FF9F00;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #FF6B00; }
+
+details.code-fold > summary {
+  color: #4A3C28;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #FF9F00; }
+
+code:not(.sourceCode) {
+  background: #090706;
+  border: 1px solid #1E180E;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+  color: #FF9F00;
+}
+
+div.sourceCode {
+  background: #090706;
+  border-left: 3px solid #FFD700;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+pre.sourceCode { background: #090706; color: #FFF8E8; }
+
+table { color: #FFF8E8; border-color: #1E180E; }
+thead { border-bottom: 2px solid #FF6B00; color: #FF6B00; }
+tbody tr:nth-child(even) { background: rgba(255, 107, 0, 0.04); }
+
+.callout { border-left: 3px solid #FF9F00; background: rgba(255, 159, 0, 0.06); }
+.callout-tip     { border-left-color: #00FF9F; background: rgba(0, 255, 159, 0.06); }
+.callout-note    { border-left-color: #00CCFF; background: rgba(0, 204, 255, 0.06); }
+.callout-warning { border-left-color: #FF3366; background: rgba(255, 51, 102, 0.06); }
+
+.figure-caption, figcaption { color: #4A3C28; font-size: 0.85rem; font-style: italic; }
+
+::selection { background: rgba(255, 107, 0, 0.35); }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #090706; }
+::-webkit-scrollbar-thumb { background: #1E180E; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #FF6B00; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #FF6B00; font-weight: bold; }    // keyword: electric orange
+code span.cf { color: #FF6B00; font-weight: bold; }    // control flow: electric orange
+code span.dt { color: #FFD700; }                       // data type: electric gold
+code span.st { color: #00FF9F; }                       // string: electric mint
+code span.ch { color: #00FF9F; }
+code span.vs { color: #00FF9F; }
+code span.ss { color: #00FF9F; }
+code span.co { color: #4A3C28; font-style: italic; }   // comment: dark amber muted
+code span.cv { color: #4A3C28; font-weight: bold; font-style: italic; }
+code span.do { color: #4A3C28; font-style: italic; }
+code span.fu { color: #FF9F00; }                       // function: amber-orange
+code span.bu { color: #FFD700; }                       // builtin: gold
+code span.dv { color: #FF3366; }                       // number: electric pink-red
+code span.fl { color: #FF3366; }
+code span.bn { color: #FF3366; }
+code span.cn { color: #FF3366; }
+code span.op { color: #886644; }                       // operator: warm brown
+code span.im { color: #00CCFF; }                       // import: electric cyan
+code span.pp { color: #00CCFF; }                       // preprocessor: electric cyan
+code span.at { color: #00CCFF; }                       // attribute: electric cyan
+code span.va { color: #FFF8E8; }
+code span.an { color: #4A3C28; font-style: italic; }
+code span.in { color: #4A3C28; font-style: italic; }
+code span.wa { color: #FF3366; font-weight: bold; }
+code span.er { color: #FF2244; font-weight: bold; }
+code span.al { color: #FF2244; font-weight: bold; }
+code span.sc { color: #FFD700; }
+code span.ot { color: #FFF8E8; }
+code span.ex { color: #FF9F00; }

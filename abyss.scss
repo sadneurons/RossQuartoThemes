@@ -1,0 +1,141 @@
+/*
+ * abyss.scss — Ross Quarto Theme  [DARK]
+ * Palette: abyss (syntax_theme_palettes.html)
+ * bg:#080C12  fg:#E8F0FF  kw:#00B4FF  ty:#00FFB4  st:#FFD000
+ * nu:#FF6B6B  dc:#B44AFF  fn:#00E5A0  op:#5080B0  cm:#3A5070
+ * Near-black navy · maximum saturation.
+ * Best for: deep-dive analyses, anything that demands vivid contrast.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    700;
+$headings-line-height:    1.2;
+
+$body-bg:           #080C12;
+$body-color:        #E8F0FF;
+$link-color:        #00E5A0;
+$link-hover-color:  #00B4FF;
+
+$headings-color:    #00B4FF;
+
+$code-bg:           #050810;
+$code-color:        #00E5A0;
+$pre-bg:            #050810;
+$pre-color:         #E8F0FF;
+
+$border-color:      #121A28;
+$border-radius:     0.25rem;
+
+$table-border-color:   #121A28;
+$table-striped-bg:     rgba(0, 180, 255, 0.05);
+$table-hover-bg:       rgba(0, 229, 160, 0.07);
+
+$enable-dark-mode: false;
+
+/*-- scss:rules --*/
+
+body { background-color: #080C12; color: #E8F0FF; }
+
+h1 {
+  border-bottom: 2px solid #00B4FF;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  color: #00B4FF;
+  text-shadow: 0 0 14px rgba(0, 180, 255, 0.65);
+}
+h2 {
+  border-bottom: 1px solid #121A28;
+  padding-bottom: 0.2em;
+  color: #00B4FF;
+  text-shadow: 0 0 8px rgba(0, 180, 255, 0.4);
+}
+h3 { color: #00FFB4; text-shadow: 0 0 8px rgba(0, 255, 180, 0.5); }
+h4 { color: #3A5070; font-weight: 600; }
+
+.sidebar { background-color: #050810; border-right: 1px solid #121A28; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #3A5070; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #00E5A0;
+  border-left: 2px solid #00E5A0;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #00B4FF; }
+
+details.code-fold > summary {
+  color: #3A5070;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #00E5A0; }
+
+code:not(.sourceCode) {
+  background: #050810;
+  border: 1px solid #121A28;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+  color: #00E5A0;
+}
+
+div.sourceCode {
+  background: #050810;
+  border-left: 3px solid #B44AFF;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+pre.sourceCode { background: #050810; color: #E8F0FF; }
+
+table { color: #E8F0FF; border-color: #121A28; }
+thead { border-bottom: 2px solid #00B4FF; color: #00B4FF; }
+tbody tr:nth-child(even) { background: rgba(0, 180, 255, 0.04); }
+
+.callout { border-left: 3px solid #00E5A0; background: rgba(0, 229, 160, 0.06); }
+.callout-tip     { border-left-color: #00FFB4; background: rgba(0, 255, 180, 0.06); }
+.callout-note    { border-left-color: #00B4FF; background: rgba(0, 180, 255, 0.06); }
+.callout-warning { border-left-color: #FF6B6B; background: rgba(255, 107, 107, 0.06); }
+
+.figure-caption, figcaption { color: #3A5070; font-size: 0.85rem; font-style: italic; }
+
+::selection { background: rgba(0, 180, 255, 0.3); }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #050810; }
+::-webkit-scrollbar-thumb { background: #121A28; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #00B4FF; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #00B4FF; font-weight: bold; }    // keyword: electric blue
+code span.cf { color: #00B4FF; font-weight: bold; }    // control flow: electric blue
+code span.dt { color: #00FFB4; }                       // data type: electric mint
+code span.st { color: #FFD000; }                       // string: electric yellow
+code span.ch { color: #FFD000; }
+code span.vs { color: #FFD000; }
+code span.ss { color: #FFD000; }
+code span.co { color: #3A5070; font-style: italic; }   // comment: deep navy muted
+code span.cv { color: #3A5070; font-weight: bold; font-style: italic; }
+code span.do { color: #3A5070; font-style: italic; }
+code span.fu { color: #00E5A0; }                       // function: electric teal
+code span.bu { color: #00B4FF; }                       // builtin: electric blue
+code span.dv { color: #FF6B6B; }                       // number: coral red
+code span.fl { color: #FF6B6B; }
+code span.bn { color: #FF6B6B; }
+code span.cn { color: #FF6B6B; }
+code span.op { color: #5080B0; }                       // operator: mid blue
+code span.im { color: #B44AFF; }                       // import: electric purple
+code span.pp { color: #B44AFF; }                       // preprocessor: electric purple
+code span.at { color: #B44AFF; }                       // attribute: electric purple
+code span.va { color: #E8F0FF; }
+code span.an { color: #3A5070; font-style: italic; }
+code span.in { color: #3A5070; font-style: italic; }
+code span.wa { color: #FF6B6B; font-weight: bold; }
+code span.er { color: #FF4444; font-weight: bold; }
+code span.al { color: #FF4444; font-weight: bold; }
+code span.sc { color: #00FFB4; }
+code span.ot { color: #E8F0FF; }
+code span.ex { color: #00E5A0; }

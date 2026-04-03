@@ -1,20 +1,19 @@
 
 <style>
-#tr3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:6px 0 4px}
-@media(max-width:500px){#tr3{grid-template-columns:1fr}}
-.badge{display:inline-block;font-size:9px;font-weight:500;padding:2px 7px;border-radius:4px;margin-left:6px;vertical-align:middle;letter-spacing:.04em}
+#tr4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:6px 0 4px}
+@media(max-width:500px){#tr4{grid-template-columns:1fr}}
 </style>
-<div id="tr3"></div>
+<div id="tr4"></div>
 <script>
 const T=[
-  {name:'Fjord',tag:'muted',tagBg:'#3A4A5A',tagFg:'#A8C0D0',sub:'Cool blue-grey · desaturated throughout',
-   c:{bg:'#252C38',fg:'#C8D4E0',cm:'#50606E',kw:'#7EA8C8',ty:'#7ABAA8',st:'#B8A888',nu:'#A88EB0',dc:'#88A8C0',fn:'#78A898',op:'#7888A0'}},
-  {name:'Loam',tag:'muted',tagBg:'#3A3020',tagFg:'#A8987A',sub:'Dark warm earth · dusty accents',
-   c:{bg:'#201E16',fg:'#C8C0A0',cm:'#5E5848',kw:'#8AAAB0',ty:'#A8845C',st:'#96A870',nu:'#C09858',dc:'#9888B8',fn:'#7898A8',op:'#A09888'}},
-  {name:'Abyss',tag:'neon',tagBg:'#001830',tagFg:'#00B4FF',sub:'Near-black navy · maximum saturation',
-   c:{bg:'#080C12',fg:'#E8F0FF',cm:'#3A5070',kw:'#00B4FF',ty:'#00FFB4',st:'#FFD000',nu:'#FF6B6B',dc:'#B44AFF',fn:'#00E5A0',op:'#5080B0'}},
-  {name:'Voltage',tag:'neon',tagBg:'#200800',tagFg:'#FF6B00',sub:'Near-black warm · vivid warm accents',
-   c:{bg:'#0C0A08',fg:'#FFF8E8',cm:'#4A3C28',kw:'#FF6B00',ty:'#FFD700',st:'#00FF9F',nu:'#FF3366',dc:'#00CCFF',fn:'#FF9F00',op:'#886644'}},
+  {name:'Toxin',sub:'Near-black green · acid terminal aesthetic',
+   c:{bg:'#060D06',fg:'#EEFFEE',cm:'#1E4020',kw:'#39FF14',ty:'#00FFFF',st:'#FFFF44',nu:'#FF6600',dc:'#FF44FF',fn:'#80FF44',op:'#40A040'}},
+  {name:'Plasma',sub:'Near-black violet · magenta dominant',
+   c:{bg:'#09060E',fg:'#F8F0FF',cm:'#362048',kw:'#FF44FF',ty:'#44FFFF',st:'#FFAA00',nu:'#44FF88',dc:'#FF66AA',fn:'#BB44FF',op:'#8844AA'}},
+  {name:'Forge',sub:'Near-black amber · red-orange heat',
+   c:{bg:'#0E0704',fg:'#FFF4E8',cm:'#4A2E18',kw:'#FF4400',ty:'#FFB800',st:'#00FFB4',nu:'#FF0066',dc:'#00CCFF',fn:'#FF8800',op:'#885522'}},
+  {name:'Aurora',sub:'Near-black navy · cool full-spectrum',
+   c:{bg:'#050A12',fg:'#E0EEFF',cm:'#1A3050',kw:'#AA44FF',ty:'#00FF88',st:'#00BBFF',nu:'#FF4488',dc:'#FFAA00',fn:'#44FFCC',op:'#4488BB'}},
 ];
 
 const LINES=[
@@ -51,7 +50,7 @@ function card(th){
   return `
 <div style="background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden">
   <div style="padding:10px 13px 8px;border-bottom:0.5px solid var(--color-border-tertiary)">
-    <p style="margin:0 0 2px;font-size:13px;font-weight:500;color:var(--color-text-primary)">${th.name}<span class="badge" style="background:${th.tagBg};color:${th.tagFg}">${th.tag}</span></p>
+    <p style="margin:0 0 2px;font-size:13px;font-weight:500;color:var(--color-text-primary)">${th.name}</p>
     <p style="margin:0;font-size:10.5px;color:var(--color-text-secondary)">${th.sub}</p>
   </div>
   <div style="padding:12px 13px;font-family:var(--font-mono);font-size:10.5px;line-height:1.72;background:${c.bg};color:${c.fg}">${code}</div>
@@ -59,5 +58,5 @@ function card(th){
 </div>`;
 }
 
-document.getElementById('tr3').innerHTML=T.map(card).join('');
+document.getElementById('tr4').innerHTML=T.map(card).join('');
 </script>
