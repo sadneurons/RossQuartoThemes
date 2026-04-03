@@ -1,0 +1,155 @@
+/*
+ * blackboard.scss — Ross Quarto Theme  [DARK]
+ * Palette: blackboard (rosspalettes.sty)
+ * P:#2E4A3E  S:#F5F5DC  A:#82B1FF  T:#F5F5DC  B:#2E4A3E
+ * Chalkboard green background, cream text, chalk-blue accent.
+ * Best for: teaching materials, lecture notes, slides-to-html.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+// Dark theme — background is the board, text is chalk
+$body-bg:           #2E4A3E;
+$body-color:        #EEE8D5;
+$link-color:        #82B1FF;
+$link-hover-color:  #B3CFFF;
+
+$headings-color:    #F5F5DC;
+
+$code-bg:           #243D33;
+$code-color:        #82B1FF;
+$pre-bg:            #243D33;
+$pre-color:         #EEE8D5;
+
+$border-color:      #3D6054;
+$border-radius:     0.25rem;
+
+$table-border-color:   #3D6054;
+$table-striped-bg:     rgba(245, 245, 220, 0.05);
+$table-hover-bg:       rgba(130, 177, 255, 0.08);
+
+// Bootstrap dark mode flag
+$enable-dark-mode: false;  // we handle colours manually
+
+/*-- scss:rules --*/
+
+// ── Base ──────────────────────────────────────────────────────────
+body { background-color: #2E4A3E; color: #EEE8D5; }
+
+// ── Headings ──────────────────────────────────────────────────────
+h1 {
+  border-bottom: 2px solid #82B1FF;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  color: #F5F5DC;
+}
+h2 { border-bottom: 1px solid #3D6054; padding-bottom: 0.2em; color: #F5F5DC; }
+h3 { color: #82B1FF; }
+h4 { color: #90A898; font-weight: 600; }
+
+// ── TOC / sidebar ─────────────────────────────────────────────────
+.sidebar {
+  background-color: #243D33;
+  border-right: 1px solid #3D6054;
+}
+.sidebar nav[role=doc-toc] ul > li > a {
+  color: #90A898;
+}
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #82B1FF;
+  border-left: 2px solid #82B1FF;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #F5F5DC; }
+
+// ── Code fold ─────────────────────────────────────────────────────
+details.code-fold > summary {
+  color: #90A898;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #82B1FF; }
+
+// ── Code blocks ───────────────────────────────────────────────────
+code:not(.sourceCode) {
+  background: #243D33;
+  border: 1px solid #3D6054;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+  color: #82B1FF;
+}
+
+div.sourceCode {
+  background: #243D33;
+  border-left: 3px solid #82B1FF;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+pre.sourceCode { background: #243D33; color: #EEE8D5; }
+
+// ── Tables ────────────────────────────────────────────────────────
+table { color: #EEE8D5; border-color: #3D6054; }
+thead { border-bottom: 2px solid #82B1FF; color: #F5F5DC; }
+tbody tr:nth-child(even) { background: rgba(245, 245, 220, 0.04); }
+
+// ── Callouts ──────────────────────────────────────────────────────
+.callout {
+  border-left: 3px solid #82B1FF;
+  background: rgba(130, 177, 255, 0.08);
+}
+.callout-tip     { border-left-color: #4CAF50; background: rgba(76, 175, 80, 0.08); }
+.callout-note    { border-left-color: #F5F5DC; }
+.callout-warning { border-left-color: #FFB74D; background: rgba(255, 183, 77, 0.08); }
+
+// ── Captions ──────────────────────────────────────────────────────
+.figure-caption, figcaption { color: #90A898; font-size: 0.85rem; font-style: italic; }
+
+// ── Highlighted / selected text ───────────────────────────────────
+::selection { background: rgba(130, 177, 255, 0.3); }
+
+// ── Scrollbar (webkit) ────────────────────────────────────────────
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #243D33; }
+::-webkit-scrollbar-thumb { background: #3D6054; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #82B1FF; }
+
+// ── Syntax highlighting token colours (Pandoc span classes) ────────
+code span.kw { color: #82B1FF; font-weight: bold; }
+code span.cf { color: #B3CFFF; font-weight: bold; }
+code span.dt { color: #82B1FF; }
+code span.st { color: #D4C89A; }
+code span.ch { color: #D4C89A; }
+code span.vs { color: #D4C89A; }
+code span.ss { color: #D4C89A; }
+code span.co { color: #7A9888; font-style: italic; }
+code span.cv { color: #7A9888; font-weight: bold; font-style: italic; }
+code span.do { color: #7A9888; font-style: italic; }
+code span.fu { color: #4FC3F7; }
+code span.bu { color: #4DB6AC; }
+code span.dv { color: #FFB74D; }
+code span.fl { color: #FFB74D; }
+code span.bn { color: #FFB74D; }
+code span.cn { color: #FFB74D; }
+code span.op { color: #6A9080; }
+code span.im { color: #9EC4FF; }
+code span.pp { color: #9EC4FF; }
+code span.at { color: #70A898; }
+code span.va { color: #EEE8D5; }
+code span.an { color: #7A9888; font-style: italic; }
+code span.in { color: #7A9888; font-style: italic; }
+code span.wa { color: #FFB74D; font-weight: bold; }
+code span.er { color: #FF5252; font-weight: bold; }
+code span.al { color: #FF5252; font-weight: bold; }
+code span.sc { color: #82B1FF; }
+code span.ot { color: #EEE8D5; }
+code span.ex { color: #82B1FF; }

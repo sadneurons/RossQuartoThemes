@@ -1,0 +1,110 @@
+/*
+ * cortex.scss — Ross Quarto Theme
+ * Palette: cortex (rosspalettes.sty)
+ * P:#2A2028  S:#CE93D8  A:#26A69A  B:#F9F7F9
+ * Deep purple-grey primary, soft purple secondary, teal accent.
+ * Best for: neuroscience, brain research, cognitive reports.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+$body-bg:           #F9F7F9;
+$body-color:        #1C1C1C;
+$link-color:        #26A69A;
+$link-hover-color:  #CE93D8;
+
+$headings-color:    #2A2028;
+
+$code-bg:           #F1EEF2;
+$code-color:        #26A69A;
+$pre-bg:            #F1EEF2;
+$pre-color:         #2A2028;
+
+$border-color:      #E0DBE2;
+$border-radius:     0.25rem;
+
+$table-border-color:   #D8D0DA;
+$table-striped-bg:     rgba(42, 32, 40, 0.04);
+$table-hover-bg:       rgba(38, 166, 154, 0.07);
+
+/*-- scss:rules --*/
+
+h1 { border-bottom: 2px solid #26A69A; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #E0DBE2; padding-bottom: 0.2em; }
+h3 { color: #26A69A; }
+h4 { color: #787078; font-weight: 600; }
+
+.sidebar { background-color: #F1EEF2; border-right: 1px solid #E0DBE2; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #787078; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #26A69A;
+  border-left: 2px solid #26A69A;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #2A2028; }
+
+details.code-fold > summary {
+  color: #787078;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #26A69A; }
+
+.callout { border-left: 3px solid #CE93D8; }
+.callout-tip     { border-left-color: #26A69A; }
+.callout-note    { border-left-color: #2A2028; }
+.callout-warning { border-left-color: #E08040; }
+
+.figure-caption, figcaption {
+  color: #787078;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+code:not(.sourceCode) {
+  background: #F1EEF2;
+  border: 1px solid #E0DBE2;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+
+div.sourceCode { border-left: 3px solid #CE93D8; border-radius: 0 0.25rem 0.25rem 0; }
+
+// ── Syntax highlighting token colours (Pandoc span classes) ────────
+code span.kw { color: #26A69A; font-weight: bold; }
+code span.cf { color: #9B6AAA; font-weight: bold; }
+code span.dt { color: #26A69A; }
+code span.st { color: #5A8A3A; }
+code span.ch { color: #5A8A3A; }
+code span.vs { color: #5A8A3A; }
+code span.ss { color: #5A8A3A; }
+code span.co { color: #907898; font-style: italic; }
+code span.cv { color: #907898; font-weight: bold; font-style: italic; }
+code span.do { color: #907898; font-style: italic; }
+code span.fu { color: #CE93D8; }
+code span.bu { color: #40B8AE; }
+code span.dv { color: #E08040; }
+code span.fl { color: #E08040; }
+code span.bn { color: #E08040; }
+code span.cn { color: #E08040; }
+code span.op { color: #9A8A9A; }
+code span.im { color: #26A69A; }
+code span.pp { color: #26A69A; }
+code span.at { color: #8A7A90; }
+code span.an { color: #907898; font-style: italic; }
+code span.in { color: #907898; font-style: italic; }
+code span.wa { color: #E08040; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #26A69A; }
+code span.ex { color: #CE93D8; }

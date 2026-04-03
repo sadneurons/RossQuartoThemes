@@ -1,0 +1,127 @@
+/*
+ * bmj.scss — Ross Quarto Theme
+ * Palette: bmj (rosspalettes.sty)
+ * P:#1B2838  S:#4A8CC0  A:#2E6FA0  B:#F6F8FA
+ * Dark navy + medical blue. Best for: BMJ-style clinical and public health papers.
+ */
+
+/*-- scss:defaults --*/
+
+// ── Typography ────────────────────────────────────────────────────
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+// ── Colour palette ────────────────────────────────────────────────
+$body-bg:           #F6F8FA;
+$body-color:        #1C1C1C;
+$link-color:        #2E6FA0;
+$link-hover-color:  #4A8CC0;
+
+// Headings pull from the dark primary
+$headings-color:    #1B2838;
+
+// ── Code ──────────────────────────────────────────────────────────
+$code-bg:           #E9EBED;
+$code-color:        #2E6FA0;
+$pre-bg:            #E9EBED;
+$pre-color:         #1C1C1C;
+
+// ── Borders / chrome ──────────────────────────────────────────────
+$border-color:      #DADDE0;
+$border-radius:     0.25rem;
+
+// ── Tables ────────────────────────────────────────────────────────
+$table-border-color:        #D1D4D8;
+$table-striped-bg:          rgba(27, 40, 56, 0.04);
+$table-hover-bg:            rgba(46, 111, 160, 0.06);
+
+/*-- scss:rules --*/
+
+// ── Headings ──────────────────────────────────────────────────────
+h1 { border-bottom: 2px solid #2E6FA0; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #D1D4D8; padding-bottom: 0.2em; }
+h3 { color: #2E6FA0; }
+h4 { color: #606C78; font-weight: 600; }
+
+// ── Quarto sidebar / TOC ──────────────────────────────────────────
+.sidebar { background-color: #E9EBED; border-right: 1px solid #DADDE0; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #2E6FA0;
+  border-left: 2px solid #2E6FA0;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a {
+  color: #606C78;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #1B2838; }
+
+// ── Code fold toggle ──────────────────────────────────────────────
+details.code-fold > summary {
+  color: #606C78;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #2E6FA0; }
+
+// ── Callout blocks ────────────────────────────────────────────────
+.callout { border-left: 3px solid #2E6FA0; }
+.callout-tip    { border-left-color: #2D6A4F; }
+.callout-note   { border-left-color: #1B2838; }
+.callout-warning { border-left-color: #E08040; }
+
+// ── Figure captions ───────────────────────────────────────────────
+.figure-caption, figcaption {
+  color: #606C78;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+// ── Inline code ───────────────────────────────────────────────────
+code:not(.sourceCode) {
+  background: #E9EBED;
+  border: 1px solid #DADDE0;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+
+// ── Source code blocks ────────────────────────────────────────────
+div.sourceCode {
+  border-left: 3px solid #4A8CC0;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+// ── Syntax highlighting token colours (Pandoc span classes) ────────
+code span.kw { color: #2E6FA0; font-weight: bold; }
+code span.cf { color: #1B2838; font-weight: bold; }
+code span.dt { color: #2E6FA0; }
+code span.st { color: #2D6A4F; }
+code span.ch { color: #2D6A4F; }
+code span.vs { color: #2D6A4F; }
+code span.ss { color: #2D6A4F; }
+code span.co { color: #8A8A94; font-style: italic; }
+code span.cv { color: #8A8A94; font-weight: bold; font-style: italic; }
+code span.do { color: #8A8A94; font-style: italic; }
+code span.fu { color: #1B2838; }
+code span.bu { color: #24506C; }
+code span.dv { color: #B5600F; }
+code span.fl { color: #B5600F; }
+code span.bn { color: #B5600F; }
+code span.cn { color: #B5600F; }
+code span.op { color: #606C78; }
+code span.im { color: #2E6FA0; }
+code span.pp { color: #2E6FA0; }
+code span.at { color: #275E88; }
+code span.an { color: #8A8A94; font-style: italic; }
+code span.in { color: #8A8A94; font-style: italic; }
+code span.wa { color: #B5600F; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #2E6FA0; }
+code span.ex { color: #2A648F; }

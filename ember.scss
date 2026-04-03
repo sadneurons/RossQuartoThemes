@@ -1,0 +1,110 @@
+/*
+ * ember.scss — Ross Quarto Theme
+ * Palette: ember (rosspalettes.sty)
+ * P:#2A1A0A  S:#E08040  A:#C06020  B:#FAF8F5
+ * Dark brown primary, warm amber secondary, cream page.
+ * Best for: theses, book-format outputs, long-form analytical writing.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+$body-bg:           #FAF8F5;
+$body-color:        #1C1C1C;
+$link-color:        #C06020;
+$link-hover-color:  #E08040;
+
+$headings-color:    #2A1A0A;
+
+$code-bg:           #F2EDE6;
+$code-color:        #C06020;
+$pre-bg:            #F2EDE6;
+$pre-color:         #2A1A0A;
+
+$border-color:      #E0D8CE;
+$border-radius:     0.25rem;
+
+$table-border-color:   #D8CFC4;
+$table-striped-bg:     rgba(42, 26, 10, 0.04);
+$table-hover-bg:       rgba(192, 96, 32, 0.06);
+
+/*-- scss:rules --*/
+
+h1 { border-bottom: 2px solid #C06020; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #E0D8CE; padding-bottom: 0.2em; }
+h3 { color: #C06020; }
+h4 { color: #7A6858; font-weight: 600; }
+
+.sidebar { background-color: #F2EDE6; border-right: 1px solid #E0D8CE; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #7A6858; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #C06020;
+  border-left: 2px solid #C06020;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #2A1A0A; }
+
+details.code-fold > summary {
+  color: #7A6858;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #C06020; }
+
+.callout { border-left: 3px solid #E08040; }
+.callout-tip     { border-left-color: #5A8A3A; }
+.callout-note    { border-left-color: #2A1A0A; }
+.callout-warning { border-left-color: #C06020; }
+
+.figure-caption, figcaption {
+  color: #7A6858;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+code:not(.sourceCode) {
+  background: #F2EDE6;
+  border: 1px solid #E0D8CE;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+
+div.sourceCode { border-left: 3px solid #E08040; border-radius: 0 0.25rem 0.25rem 0; }
+
+// ── Syntax highlighting token colours (Pandoc span classes) ────────
+code span.kw { color: #C06020; font-weight: bold; }
+code span.cf { color: #2A1A0A; font-weight: bold; }
+code span.dt { color: #C06020; }
+code span.st { color: #5A7A2A; }
+code span.ch { color: #5A7A2A; }
+code span.vs { color: #5A7A2A; }
+code span.ss { color: #5A7A2A; }
+code span.co { color: #907860; font-style: italic; }
+code span.cv { color: #907860; font-weight: bold; font-style: italic; }
+code span.do { color: #907860; font-style: italic; }
+code span.fu { color: #E08040; }
+code span.bu { color: #A05020; }
+code span.dv { color: #8B4513; }
+code span.fl { color: #8B4513; }
+code span.bn { color: #8B4513; }
+code span.cn { color: #8B4513; }
+code span.op { color: #907060; }
+code span.im { color: #C06020; }
+code span.pp { color: #C06020; }
+code span.at { color: #A07050; }
+code span.an { color: #907860; font-style: italic; }
+code span.in { color: #907860; font-style: italic; }
+code span.wa { color: #E08040; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #C06020; }
+code span.ex { color: #E08040; }

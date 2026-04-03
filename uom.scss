@@ -1,0 +1,89 @@
+/*
+ * uom.scss — Ross Quarto Theme
+ * Palette: uom (rosspalettes.sty)
+ * P:#2B0A3D  S:#8B3DB8  A:#660099  B:#F8F7F9
+ * University of Manchester purple + violet.
+ * Best for: institutional UoM reports, academic submissions.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+$body-bg:           #F8F7F9;
+$body-color:        #1C1C1C;
+$link-color:        #660099;
+$link-hover-color:  #8B3DB8;
+$headings-color:    #2B0A3D;
+
+$code-bg:           #EEECF1;
+$code-color:        #660099;
+$pre-bg:            #EEECF1;
+$pre-color:         #1C1C1C;
+
+$border-color:      #D9D6DF;
+$border-radius:     0.25rem;
+
+$table-border-color:        #DDD9E3;
+$table-striped-bg:          rgba(43, 10, 61, 0.04);
+$table-hover-bg:            rgba(102, 0, 153, 0.06);
+
+/*-- scss:rules --*/
+
+h1 { border-bottom: 2px solid #660099; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #D9D6DF; padding-bottom: 0.2em; }
+h3 { color: #660099; }
+h4 { color: #6B5F78; font-weight: 600; }
+
+.sidebar { background-color: #EEECF1; border-right: 1px solid #D9D6DF; }
+.sidebar nav[role=doc-toc] ul > li > a.active { color: #660099; border-left: 2px solid #660099; padding-left: 0.4em; font-weight: 600; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #6B5F78; }
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #2B0A3D; }
+
+details.code-fold > summary { color: #6B5F78; font-size: 0.82rem; font-family: $font-family-monospace; cursor: pointer; }
+details.code-fold > summary:hover { color: #660099; }
+
+.callout { border-left: 3px solid #660099; }
+.callout-tip    { border-left-color: #2D6A4F; }
+.callout-note   { border-left-color: #2B0A3D; }
+.callout-warning { border-left-color: #E08040; }
+
+.figure-caption, figcaption { color: #6B5F78; font-size: 0.85rem; font-style: italic; }
+
+code:not(.sourceCode) { background: #EEECF1; border: 1px solid #D9D6DF; border-radius: 3px; padding: 0.1em 0.35em; font-size: 0.88em; }
+
+div.sourceCode { border-left: 3px solid #8B3DB8; border-radius: 0 0.25rem 0.25rem 0; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #660099; font-weight: bold; }
+code span.cf { color: #2B0A3D; font-weight: bold; }
+code span.dt { color: #660099; }
+code span.st { color: #2D6A4F; }
+code span.ch { color: #2D6A4F; }
+code span.vs { color: #2D6A4F; }
+code span.ss { color: #2D6A4F; }
+code span.co { color: #8A8A94; font-style: italic; }
+code span.cv { color: #8A8A94; font-weight: bold; font-style: italic; }
+code span.do { color: #8A8A94; font-style: italic; }
+code span.fu { color: #2B0A3D; }
+code span.bu { color: #47004E; }
+code span.dv { color: #B5600F; }
+code span.fl { color: #B5600F; }
+code span.bn { color: #B5600F; }
+code span.cn { color: #B5600F; }
+code span.op { color: #6B5F78; }
+code span.im { color: #660099; }
+code span.pp { color: #660099; }
+code span.at { color: #4A006E; }
+code span.an { color: #8A8A94; font-style: italic; }
+code span.in { color: #8A8A94; font-style: italic; }
+code span.wa { color: #B5600F; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #660099; }
+code span.ex { color: #7A20A8; }

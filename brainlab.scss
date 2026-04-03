@@ -1,0 +1,130 @@
+/*
+ * brainlab.scss — Ross Quarto Theme
+ * Palette: brainlab (rosspalettes.sty)
+ * P:#1A2030  S:#4FC3F7  A:#FF4500  B:#F5F7FA
+ * Dark blue-grey primary, sky-blue secondary, orange-red accent.
+ * Best for: neuroimaging notebooks, ASL/fMRI analysis, TDA reports.
+ */
+
+/*-- scss:defaults --*/
+
+// ── Typography ────────────────────────────────────────────────────
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+// ── Colour palette ────────────────────────────────────────────────
+$body-bg:           #F5F7FA;
+$body-color:        #1C1C1C;
+$link-color:        #1A6B8A;
+$link-hover-color:  #4FC3F7;
+
+$headings-color:    #1A2030;
+
+// ── Code ──────────────────────────────────────────────────────────
+$code-bg:           #EBF2F8;
+$code-color:        #1A6B8A;
+$pre-bg:            #EBF2F8;
+$pre-color:         #1A2030;
+
+// ── Borders ───────────────────────────────────────────────────────
+$border-color:      #D8E2EC;
+$border-radius:     0.25rem;
+
+// ── Tables ────────────────────────────────────────────────────────
+$table-border-color:   #D0DCE8;
+$table-striped-bg:     rgba(26, 32, 48, 0.04);
+$table-hover-bg:       rgba(79, 195, 247, 0.08);
+
+/*-- scss:rules --*/
+
+// ── Headings ──────────────────────────────────────────────────────
+h1 { border-bottom: 2px solid #4FC3F7; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #D0DCE8; padding-bottom: 0.2em; }
+h3 { color: #1A6B8A; }
+h4 { color: #607888; font-weight: 600; }
+
+// ── TOC / sidebar ─────────────────────────────────────────────────
+.sidebar { background-color: #ECF1F7; border-right: 1px solid #D8E2EC; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #FF4500;
+  border-left: 2px solid #FF4500;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a { color: #607888; }
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #1A2030; }
+
+// ── Code fold ─────────────────────────────────────────────────────
+details.code-fold > summary {
+  color: #607888;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #4FC3F7; }
+
+// ── Callout blocks ────────────────────────────────────────────────
+.callout { border-left: 3px solid #4FC3F7; }
+.callout-tip     { border-left-color: #26A69A; }
+.callout-note    { border-left-color: #1A2030; }
+.callout-warning { border-left-color: #FF4500; }
+
+// ── Figure captions ───────────────────────────────────────────────
+.figure-caption, figcaption {
+  color: #607888;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+// ── Inline code ───────────────────────────────────────────────────
+code:not(.sourceCode) {
+  background: #EBF2F8;
+  border: 1px solid #D0DCE8;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+
+// ── Source code blocks ────────────────────────────────────────────
+div.sourceCode {
+  border-left: 3px solid #4FC3F7;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+// ── MNI/stats annotation spans (optional semantic markup) ─────────
+.mni-coord   { font-family: $font-family-monospace; color: #4FC3F7; font-size: 0.9em; }
+.stat-label  { font-weight: 600; color: #FF4500; }
+.roi-label   { font-style: italic; color: #1A6B8A; }
+
+// ── Syntax highlighting token colours (Pandoc span classes) ────────
+code span.kw { color: #FF4500; font-weight: bold; }
+code span.cf { color: #1A6B8A; font-weight: bold; }
+code span.dt { color: #FF7043; }
+code span.st { color: #26A69A; }
+code span.ch { color: #26A69A; }
+code span.vs { color: #26A69A; }
+code span.ss { color: #26A69A; }
+code span.co { color: #7A9AA8; font-style: italic; }
+code span.cv { color: #7A9AA8; font-weight: bold; font-style: italic; }
+code span.do { color: #7A9AA8; font-style: italic; }
+code span.fu { color: #4FC3F7; }
+code span.bu { color: #26C6DA; }
+code span.dv { color: #F4A830; }
+code span.fl { color: #F4A830; }
+code span.bn { color: #F4A830; }
+code span.cn { color: #F4A830; }
+code span.op { color: #8AB4C8; }
+code span.im { color: #FF6E3A; }
+code span.pp { color: #FF6E3A; }
+code span.at { color: #5BBCD0; }
+code span.an { color: #7A9AA8; font-style: italic; }
+code span.in { color: #7A9AA8; font-style: italic; }
+code span.wa { color: #F4A830; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #FF4500; }
+code span.ex { color: #4FC3F7; }

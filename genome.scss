@@ -1,0 +1,91 @@
+/*
+ * genome.scss — Ross Quarto Theme
+ * Palette: genome (rosspalettes.sty)
+ * P:#0D1B2A  S:#1E88E5  A:#43A047  TM:#506878  B:#F5F8FA
+ * Deep navy + blue + green.
+ * Best for: genomics, genetics, bioinformatics notebooks.
+ * Note: S (#1E88E5) = keyword/datatype; A (#43A047) = strings/function (green = biology).
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+$body-bg:           #F5F8FA;
+$body-color:        #1C1C1C;
+$link-color:        #43A047;
+$link-hover-color:  #1E88E5;
+$headings-color:    #0D1B2A;
+
+$code-bg:           #E9EFF4;
+$code-color:        #43A047;
+$pre-bg:            #E9EFF4;
+$pre-color:         #1C1C1C;
+
+$border-color:      #D2DCE4;
+$border-radius:     0.25rem;
+
+$table-border-color:        #D6E0E8;
+$table-striped-bg:          rgba(13, 27, 42, 0.04);
+$table-hover-bg:            rgba(67, 160, 71, 0.06);
+
+/*-- scss:rules --*/
+
+h1 { border-bottom: 2px solid #43A047; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #D2DCE4; padding-bottom: 0.2em; }
+h3 { color: #43A047; }
+h4 { color: #506878; font-weight: 600; }
+
+.sidebar { background-color: #E9EFF4; border-right: 1px solid #D2DCE4; }
+.sidebar nav[role=doc-toc] ul > li > a.active { color: #43A047; border-left: 2px solid #43A047; padding-left: 0.4em; font-weight: 600; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #506878; }
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #0D1B2A; }
+
+details.code-fold > summary { color: #506878; font-size: 0.82rem; font-family: $font-family-monospace; cursor: pointer; }
+details.code-fold > summary:hover { color: #43A047; }
+
+.callout { border-left: 3px solid #43A047; }
+.callout-tip    { border-left-color: #2D6A4F; }
+.callout-note   { border-left-color: #0D1B2A; }
+.callout-warning { border-left-color: #E08040; }
+
+.figure-caption, figcaption { color: #506878; font-size: 0.85rem; font-style: italic; }
+
+code:not(.sourceCode) { background: #E9EFF4; border: 1px solid #D2DCE4; border-radius: 3px; padding: 0.1em 0.35em; font-size: 0.88em; }
+
+div.sourceCode { border-left: 3px solid #1E88E5; border-radius: 0 0.25rem 0.25rem 0; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+// S (#1E88E5) drives keyword/datatype; A (#43A047, green) drives strings/function — biology convention
+code span.kw { color: #1E88E5; font-weight: bold; }
+code span.cf { color: #0D1B2A; font-weight: bold; }
+code span.dt { color: #1E88E5; }
+code span.st { color: #43A047; }
+code span.ch { color: #43A047; }
+code span.vs { color: #43A047; }
+code span.ss { color: #43A047; }
+code span.co { color: #8A8A94; font-style: italic; }
+code span.cv { color: #8A8A94; font-weight: bold; font-style: italic; }
+code span.do { color: #8A8A94; font-style: italic; }
+code span.fu { color: #43A047; }
+code span.bu { color: #2E6496; }
+code span.dv { color: #B5600F; }
+code span.fl { color: #B5600F; }
+code span.bn { color: #B5600F; }
+code span.cn { color: #B5600F; }
+code span.op { color: #506878; }
+code span.im { color: #1E88E5; }
+code span.pp { color: #1E88E5; }
+code span.at { color: #1560B0; }
+code span.an { color: #8A8A94; font-style: italic; }
+code span.in { color: #8A8A94; font-style: italic; }
+code span.wa { color: #B5600F; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #1E88E5; }
+code span.ex { color: #55B059; }

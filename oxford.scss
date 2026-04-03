@@ -1,0 +1,115 @@
+/*
+ * oxford.scss — Ross Quarto Theme
+ * Palette: oxford (rosspalettes.sty)
+ * P:#002147  S:#1A3A60  A:#002147  B:#F6F7F9
+ * Classic Oxford blue. Restrained, institutional.
+ * Best for: grant reports, institutional documents, formal write-ups.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.7;
+$headings-font-weight:    700;
+$headings-line-height:    1.2;
+
+$body-bg:           #F6F7F9;
+$body-color:        #1C1C1C;
+$link-color:        #002147;
+$link-hover-color:  #1A3A60;
+
+$headings-color:    #002147;
+
+$code-bg:           #EEF0F4;
+$code-color:        #1A3A60;
+$pre-bg:            #EEF0F4;
+$pre-color:         #002147;
+
+$border-color:      #D4D8E0;
+$border-radius:     0.2rem;
+
+$table-border-color:   #C8CEDC;
+$table-striped-bg:     rgba(0, 33, 71, 0.04);
+$table-hover-bg:       rgba(26, 58, 96, 0.06);
+
+/*-- scss:rules --*/
+
+h1 {
+  border-bottom: 3px solid #002147;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.8em;
+  letter-spacing: -0.01em;
+}
+h2 { border-bottom: 1px solid #D4D8E0; padding-bottom: 0.2em; }
+h3 { color: #1A3A60; }
+h4 { color: #5A6878; font-weight: 600; }
+
+.sidebar { background-color: #ECEEf2; border-right: 1px solid #D4D8E0; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #5A6878; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #002147;
+  border-left: 3px solid #002147;
+  padding-left: 0.4em;
+  font-weight: 700;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #002147; }
+
+details.code-fold > summary {
+  color: #5A6878;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #002147; }
+
+.callout { border-left: 3px solid #002147; }
+.callout-tip     { border-left-color: #2D6A4F; }
+.callout-note    { border-left-color: #1A3A60; }
+.callout-warning { border-left-color: #B84520; }
+
+.figure-caption, figcaption {
+  color: #5A6878;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+code:not(.sourceCode) {
+  background: #EEF0F4;
+  border: 1px solid #D4D8E0;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+
+div.sourceCode { border-left: 4px solid #002147; border-radius: 0 0.2rem 0.2rem 0; }
+
+// ── Syntax highlighting token colours (Pandoc span classes) ────────
+code span.kw { color: #002147; font-weight: bold; }
+code span.cf { color: #1A3A60; font-weight: bold; }
+code span.dt { color: #002147; }
+code span.st { color: #2D6A4F; }
+code span.ch { color: #2D6A4F; }
+code span.vs { color: #2D6A4F; }
+code span.ss { color: #2D6A4F; }
+code span.co { color: #7A8090; font-style: italic; }
+code span.cv { color: #7A8090; font-weight: bold; font-style: italic; }
+code span.do { color: #7A8090; font-style: italic; }
+code span.fu { color: #1A3A60; }
+code span.bu { color: #1A5070; }
+code span.dv { color: #8B4513; }
+code span.fl { color: #8B4513; }
+code span.bn { color: #8B4513; }
+code span.cn { color: #8B4513; }
+code span.op { color: #6A7080; }
+code span.im { color: #002147; }
+code span.pp { color: #002147; }
+code span.at { color: #2A4A70; }
+code span.an { color: #7A8090; font-style: italic; }
+code span.in { color: #7A8090; font-style: italic; }
+code span.wa { color: #8B4513; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #002147; }
+code span.ex { color: #1A3A60; }

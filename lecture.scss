@@ -1,0 +1,88 @@
+/*
+ * lecture.scss — Ross Quarto Theme
+ * Palette: lecture (rosspalettes.sty)
+ * P:#1A3A6B  S:#4CAF50  A:#1A3A6B  B:#FAF9F5
+ * Academic navy + green.
+ * Best for: lecture notes, course materials, educational content.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+$body-bg:           #FAF9F5;
+$body-color:        #1C1C1C;
+$link-color:        #1A3A6B;
+$link-hover-color:  #4CAF50;
+$headings-color:    #1A3A6B;
+
+$code-bg:           #F0EFE9;
+$code-color:        #1A3A6B;
+$pre-bg:            #F0EFE9;
+$pre-color:         #1C1C1C;
+
+$border-color:      #D8D6CE;
+$border-radius:     0.25rem;
+
+$table-border-color:        #DAD8D0;
+$table-striped-bg:          rgba(26, 58, 107, 0.04);
+$table-hover-bg:            rgba(76, 175, 80, 0.06);
+
+/*-- scss:rules --*/
+
+h1 { border-bottom: 2px solid #1A3A6B; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #D8D6CE; padding-bottom: 0.2em; }
+h3 { color: #4CAF50; }
+h4 { color: #607080; font-weight: 600; }
+
+.sidebar { background-color: #F0EFE9; border-right: 1px solid #D8D6CE; }
+.sidebar nav[role=doc-toc] ul > li > a.active { color: #4CAF50; border-left: 2px solid #4CAF50; padding-left: 0.4em; font-weight: 600; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #607080; }
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #1A3A6B; }
+
+details.code-fold > summary { color: #607080; font-size: 0.82rem; font-family: $font-family-monospace; cursor: pointer; }
+details.code-fold > summary:hover { color: #4CAF50; }
+
+.callout { border-left: 3px solid #1A3A6B; }
+.callout-tip    { border-left-color: #2D6A4F; }
+.callout-note   { border-left-color: #1A3A6B; }
+.callout-warning { border-left-color: #E08040; }
+
+.figure-caption, figcaption { color: #607080; font-size: 0.85rem; font-style: italic; }
+
+code:not(.sourceCode) { background: #F0EFE9; border: 1px solid #D8D6CE; border-radius: 3px; padding: 0.1em 0.35em; font-size: 0.88em; }
+
+div.sourceCode { border-left: 3px solid #4CAF50; border-radius: 0 0.25rem 0.25rem 0; }
+
+code span.kw { color: #4CAF50; font-weight: bold; }
+code span.cf { color: #1A3A6B; font-weight: bold; }
+code span.dt { color: #1A3A6B; }
+code span.st { color: #2D6A4F; }
+code span.ch { color: #2D6A4F; }
+code span.vs { color: #2D6A4F; }
+code span.ss { color: #2D6A4F; }
+code span.co { color: #8A8A94; font-style: italic; }
+code span.cv { color: #8A8A94; font-weight: bold; font-style: italic; }
+code span.do { color: #8A8A94; font-style: italic; }
+code span.fu { color: #1A3A6B; }
+code span.bu { color: #2F72BB; }
+code span.dv { color: #B5600F; }
+code span.fl { color: #B5600F; }
+code span.bn { color: #B5600F; }
+code span.cn { color: #B5600F; }
+code span.op { color: #607080; }
+code span.im { color: #1A3A6B; }
+code span.pp { color: #1A3A6B; }
+code span.at { color: #132C52; }
+code span.an { color: #8A8A94; font-style: italic; }
+code span.in { color: #8A8A94; font-style: italic; }
+code span.wa { color: #B5600F; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #1A3A6B; }
+code span.ex { color: #2F72BB; }

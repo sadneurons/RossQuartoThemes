@@ -1,0 +1,47 @@
+# ─────────────────────────────────────────────────────────────────
+# Ross Quarto Themes — example _quarto.yml configurations
+# Put this file (renamed _quarto.yml) next to your .ipynb or .qmd
+# Reference themes by absolute or relative path to the .scss file.
+# ─────────────────────────────────────────────────────────────────
+
+# ── Neuroimaging / ASL notebooks ─────────────────────────────────
+format:
+  html:
+    theme: /home/tenebris/Desktop/RossQuartoThemes/brainlab.scss
+    highlight-style: /home/tenebris/Desktop/RossQuartoThemes/brainlab.theme
+    code-fold: true
+    code-tools: true
+    code-summary: "Show code"
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    self-contained: true
+    embed-resources: true
+    number-sections: false
+
+execute:
+  freeze: true
+  warning: false
+  message: false
+
+# ─────────────────────────────────────────────────────────────────
+# Theme quick-reference:
+#
+#   lancet.scss    — deep navy + crimson       manuscripts, analysis reports
+#   brainlab.scss  — dark blue + cyan/orange   neuroimaging, ASL, TDA notebooks
+#   nature.scss    — deep blue + Nature blue   preprints, methods papers
+#   cortex.scss    — dark purple + teal        neuroscience, cognitive research
+#   slate.scss     — blue-grey                 stats reports, generic notebooks
+#   oxford.scss    — Oxford blue               grants, institutional documents
+#   ember.scss     — dark brown + amber        theses, long-form writing
+#   blackboard.scss — chalkboard green [DARK]  teaching, lecture notes
+#
+# Usage — always pair .scss theme with matching .theme highlight file:
+#   theme:           /home/tenebris/Desktop/RossQuartoThemes/lancet.scss
+#   highlight-style: /home/tenebris/Desktop/RossQuartoThemes/lancet.theme
+#
+#   theme:           /home/tenebris/Desktop/RossQuartoThemes/blackboard.scss
+#   highlight-style: /home/tenebris/Desktop/RossQuartoThemes/blackboard.theme
+#
+# NOTE: key is highlight-style (not syntax-highlighting — Quarto ignores that)
+# ─────────────────────────────────────────────────────────────────
