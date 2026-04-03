@@ -1,0 +1,81 @@
+/*
+ * evergreen.scss — Ross Quarto Theme
+ * Palette: evergreen (rosspalettes.sty)
+ * P:#1A2E1A  S:#40916C  A:#2D6A4F  B:#F8FAF7
+ * Forest dark green + emerald.
+ * Best for: ecology, sustainability, environmental research.
+ * Note: strings use #1E5C3A (not A=#2D6A4F) to maintain contrast.
+ */
+
+/*-- scss:defaults --*/
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+$body-bg:           #F8FAF7;
+$body-color:        #1C1C1C;
+$link-color:        #2D6A4F;
+$link-hover-color:  #40916C;
+$headings-color:    #1A2E1A;
+$code-bg:           #EBEEEA;
+$code-color:        #2D6A4F;
+$pre-bg:            #EBEEEA;
+$pre-color:         #1C1C1C;
+$border-color:      #D5DDD4;
+$border-radius:     0.25rem;
+$table-border-color:        #DAE2D8;
+$table-striped-bg:          rgba(26, 46, 26, 0.04);
+$table-hover-bg:            rgba(45, 106, 79, 0.06);
+
+/*-- scss:rules --*/
+
+h1 { border-bottom: 2px solid #2D6A4F; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #D5DDD4; padding-bottom: 0.2em; }
+h3 { color: #2D6A4F; }
+h4 { color: #5A6B5A; font-weight: 600; }
+.sidebar { background-color: #EBEEEA; border-right: 1px solid #D5DDD4; }
+.sidebar nav[role=doc-toc] ul > li > a.active { color: #2D6A4F; border-left: 2px solid #2D6A4F; padding-left: 0.4em; font-weight: 600; }
+.sidebar nav[role=doc-toc] ul > li > a { color: #5A6B5A; }
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #1A2E1A; }
+details.code-fold > summary { color: #5A6B5A; font-size: 0.82rem; font-family: $font-family-monospace; cursor: pointer; }
+details.code-fold > summary:hover { color: #2D6A4F; }
+.callout { border-left: 3px solid #2D6A4F; }
+.callout-tip    { border-left-color: #40916C; }
+.callout-note   { border-left-color: #1A2E1A; }
+.callout-warning { border-left-color: #E08040; }
+.figure-caption, figcaption { color: #5A6B5A; font-size: 0.85rem; font-style: italic; }
+code:not(.sourceCode) { background: #EBEEEA; border: 1px solid #D5DDD4; border-radius: 3px; padding: 0.1em 0.35em; font-size: 0.88em; }
+div.sourceCode { border-left: 3px solid #40916C; border-radius: 0 0.25rem 0.25rem 0; }
+
+// Syntax highlighting token colours (Pandoc span classes)
+code span.kw { color: #2D6A4F; font-weight: bold; }
+code span.cf { color: #1A2E1A; font-weight: bold; }
+code span.dt { color: #2D6A4F; }
+code span.st { color: #1E5C3A; }
+code span.ch { color: #1E5C3A; }
+code span.vs { color: #1E5C3A; }
+code span.ss { color: #1E5C3A; }
+code span.co { color: #8A8A94; font-style: italic; }
+code span.cv { color: #8A8A94; font-weight: bold; font-style: italic; }
+code span.do { color: #8A8A94; font-style: italic; }
+code span.fu { color: #1A2E1A; }
+code span.bu { color: #245C34; }
+code span.dv { color: #B5600F; }
+code span.fl { color: #B5600F; }
+code span.bn { color: #B5600F; }
+code span.cn { color: #B5600F; }
+code span.op { color: #5A6B5A; }
+code span.im { color: #2D6A4F; }
+code span.pp { color: #2D6A4F; }
+code span.at { color: #265B43; }
+code span.an { color: #8A8A94; font-style: italic; }
+code span.in { color: #8A8A94; font-style: italic; }
+code span.wa { color: #B5600F; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #2D6A4F; }
+code span.ex { color: #2D6A4F; }

@@ -1,0 +1,128 @@
+/*
+ * bordeaux.scss — Ross Quarto Theme
+ * Palette: bordeaux (rosspalettes.sty)
+ * P:#2A0818  S:#AA5068  A:#8A3048  B:#FAF8F7
+ * Deep wine + rose.
+ * Best for: history, humanities, literary analysis.
+ */
+
+/*-- scss:defaults --*/
+
+// ── Typography ────────────────────────────────────────────────────
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+$font-size-base:          0.95rem;
+$line-height-base:        1.65;
+$headings-font-weight:    600;
+$headings-line-height:    1.25;
+
+// ── Colour palette ────────────────────────────────────────────────
+$body-bg:           #FAF8F7;
+$body-color:        #1C1C1C;
+$link-color:        #8A3048;
+$link-hover-color:  #AA5068;
+
+// Headings pull from the dark primary
+$headings-color:    #2A0818;
+
+// ── Code ──────────────────────────────────────────────────────────
+$code-bg:           #EDEBE9;
+$code-color:        #8A3048;
+$pre-bg:            #EDEBE9;
+$pre-color:         #1C1C1C;
+
+// ── Borders / chrome ──────────────────────────────────────────────
+$border-color:      #E0DBD9;
+$border-radius:     0.25rem;
+
+// ── Tables ────────────────────────────────────────────────────────
+$table-border-color:        #E2DEDD;
+$table-striped-bg:          rgba(42, 8, 24, 0.04);
+$table-hover-bg:            rgba(138, 48, 72, 0.06);
+
+/*-- scss:rules --*/
+
+// ── Headings ──────────────────────────────────────────────────────
+h1 { border-bottom: 2px solid #8A3048; padding-bottom: 0.3em; margin-bottom: 0.8em; }
+h2 { border-bottom: 1px solid #E2DEDD; padding-bottom: 0.2em; }
+h3 { color: #8A3048; }
+h4 { color: #786068; font-weight: 600; }
+
+// ── Quarto sidebar / TOC ──────────────────────────────────────────
+.sidebar { background-color: #EDEBE9; border-right: 1px solid #E0DBD9; }
+.sidebar nav[role=doc-toc] ul > li > a.active {
+  color: #8A3048;
+  border-left: 2px solid #8A3048;
+  padding-left: 0.4em;
+  font-weight: 600;
+}
+.sidebar nav[role=doc-toc] ul > li > a {
+  color: #786068;
+}
+.sidebar nav[role=doc-toc] ul > li > a:hover { color: #2A0818; }
+
+// ── Code fold toggle ──────────────────────────────────────────────
+details.code-fold > summary {
+  color: #786068;
+  font-size: 0.82rem;
+  font-family: $font-family-monospace;
+  cursor: pointer;
+}
+details.code-fold > summary:hover { color: #8A3048; }
+
+// ── Callout blocks ────────────────────────────────────────────────
+.callout { border-left: 3px solid #8A3048; }
+.callout-tip    { border-left-color: #2D6A4F; }
+.callout-note   { border-left-color: #2A0818; }
+.callout-warning { border-left-color: #E08040; }
+
+// ── Figure captions ───────────────────────────────────────────────
+.figure-caption, figcaption {
+  color: #786068;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+// ── Inline code ───────────────────────────────────────────────────
+code:not(.sourceCode) {
+  background: #EDEBE9;
+  border: 1px solid #E0DBD9;
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+
+// ── Source code blocks ────────────────────────────────────────────
+div.sourceCode {
+  border-left: 3px solid #AA5068;
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+// ── Syntax highlighting token colours (Pandoc span classes) ────────
+code span.kw { color: #8A3048; font-weight: bold; }
+code span.cf { color: #2A0818; font-weight: bold; }
+code span.dt { color: #8A3048; }
+code span.st { color: #2D6A4F; }
+code span.ch { color: #2D6A4F; }
+code span.vs { color: #2D6A4F; }
+code span.ss { color: #2D6A4F; }
+code span.co { color: #8A8A94; font-style: italic; }
+code span.cv { color: #8A8A94; font-weight: bold; font-style: italic; }
+code span.do { color: #8A8A94; font-style: italic; }
+code span.fu { color: #2A0818; }
+code span.bu { color: #5A1C30; }
+code span.dv { color: #B5600F; }
+code span.fl { color: #B5600F; }
+code span.bn { color: #B5600F; }
+code span.cn { color: #B5600F; }
+code span.op { color: #786068; }
+code span.im { color: #8A3048; }
+code span.pp { color: #8A3048; }
+code span.at { color: #75293D; }
+code span.an { color: #8A8A94; font-style: italic; }
+code span.in { color: #8A8A94; font-style: italic; }
+code span.wa { color: #B5600F; font-weight: bold; }
+code span.er { color: #CC0000; font-weight: bold; }
+code span.al { color: #CC0000; font-weight: bold; }
+code span.sc { color: #8A3048; }
+code span.ex { color: #75293D; }
